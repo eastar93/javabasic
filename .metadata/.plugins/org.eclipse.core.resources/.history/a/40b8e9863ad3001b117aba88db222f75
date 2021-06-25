@@ -1,0 +1,18 @@
+package Constructor;
+
+public class MainS {
+	
+	public static void main(String[] args) {
+		
+		StarCraft unit1 = new StarCraft("Terran", "Normal", "Marine" ,"Small", 40, 1, 6, 0);
+		unit1.getInfo();
+		unit1.HP=1000;
+		unit1.getInfo();
+		
+		
+		
+		
+		
+		
+	}
+}

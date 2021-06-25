@@ -1,0 +1,23 @@
+package Constructor;
+
+public class MainS {
+	
+	public static void main(String[] args) {
+		
+		StarCraft unit = new StarCraft("Terran", "Normal", "Marine" ,"small", 40, 1, 6, 0);
+		unit.APUpgrade();
+		unit.getInfo();
+		unit.APUpgrade();
+		unit.getInfo();
+		unit.Stimpack();
+		unit.getInfo();
+		unit.Stimpack();
+		unit.Stimpack();
+		unit.Stimpack();
+		unit.Stimpack();
+		
+		
+		
+		
+	}
+}

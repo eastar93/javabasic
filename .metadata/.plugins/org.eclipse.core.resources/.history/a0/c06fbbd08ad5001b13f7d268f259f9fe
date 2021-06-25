@@ -1,0 +1,13 @@
+package Polymorphism.game;
+
+public class Goblin extends Monster {
+	
+	public Goblin(String Name, int Hp, int Atk, int Def) {
+		super("Goblin", 40, 5, 1);
+		
+	}
+
+}
+
+	
+	

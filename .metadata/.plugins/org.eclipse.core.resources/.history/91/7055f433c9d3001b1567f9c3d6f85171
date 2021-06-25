@@ -1,0 +1,22 @@
+package AccessModifier03;
+
+public class Main02 {
+	
+	public static void main(String[] args) {
+		//다른 패키지에서 상속받은 Child02를 확인해보겠습니다.
+		Child02 child2 = new Child02();
+		
+		//1.public접근
+		System.out.println(child2.a);
+		//1-2.child내부의 e값 변경 및 접근
+		child2.e = 100;
+		System.out.println(child2.e);
+		//2.protected접근
+		//protected는 같은 패키지, 혹은 다른 패키지라면
+		//상속 관계일때 접근 가능
+		//System.out.println(child2.b);
+		//3.defalut(패키지가 같으면 접근 가능)
+		//System.out.println(child2.d);
+	}
+
+}

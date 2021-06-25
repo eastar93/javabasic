@@ -1,0 +1,19 @@
+package Constructor;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Car car1 = new Car(100, 0, "철수");
+		
+		
+		//자동차 정보 조회
+		car1.getInfo();
+		car1.accelSpeed();
+		car1.accelSpeed();
+		car1.breakSpeed();
+		car1.accelSpeed();
+		
+	}
+
+}

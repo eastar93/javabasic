@@ -1,0 +1,11 @@
+package Constructor;
+
+public class DogMain {
+	
+	public static void main(String[] args) {
+		
+		new Dog("카레", 6, "골든리트리버", false);
+		new Dog("바둑이", 3, "코커스파니엘", true);
+	}
+
+}

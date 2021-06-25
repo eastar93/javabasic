@@ -1,0 +1,17 @@
+package Structure;
+
+public class Structure01 {
+	
+	public static void main(String[] args) {
+		
+		Person a = new Person();
+		a.name = "신동규";
+		a.age = 29;
+		a.pNum = "010-8899-0785";
+		System.out.println(a.name);
+		System.out.println(a.age);
+		System.out.println(a.pNum);
+		
+	}
+
+}

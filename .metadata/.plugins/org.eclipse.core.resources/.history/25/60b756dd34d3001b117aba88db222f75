@@ -1,0 +1,22 @@
+package AccessModifier;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		/*
+		 * 전사를 하나 만들고 사냥을 3번 하세요.
+		 * 사냥 3번 후에 전체 상태를 sysout을 이용해 출력해주세요.
+		 */
+		
+		Warrior w1 = new Warrior("eastar93");
+		w1.hunt();
+		w1.hunt();
+		w1.hunt();
+		System.out.println("아이디 : " +w1.ID);
+		System.out.println("Lv : " +w1.Lv);
+		System.out.println("공격력 : " +w1.Atk);
+		System.out.println("체력 : " +w1.Hp);
+		System.out.println("Exp : " +w1.Exp);
+	}
+
+}

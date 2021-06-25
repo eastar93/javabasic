@@ -1,0 +1,29 @@
+package Overloading;
+
+public class OverTest {
+	
+	public static void OverTest()
+	{
+		System.out.printf("출력1 : %s, %d%n", "0",1);
+	}
+	public static void OverTest(String a)
+	{
+		System.out.printf("출력2 : %s, %d%n", a, 2);
+	}
+	public static void OverTest(int b)
+	{
+		System.out.printf("출력3 : %s, %d%n", "3", b);
+	}
+	public static void OverTest(String a, int b)
+	{
+		System.out.printf("출력4 : %s, %d%n", a, b);
+	}
+	public static void main(String[] args) {
+		
+		OverTest();
+		OverTest("G");
+		OverTest(3);
+		OverTest("A", 3);
+	}
+
+}

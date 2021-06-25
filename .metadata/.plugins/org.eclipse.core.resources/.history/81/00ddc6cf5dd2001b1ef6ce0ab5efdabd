@@ -1,0 +1,11 @@
+package Constructor;
+
+public class Main03 {
+	
+	public static void main(String[] args) {
+		
+		BasketballPlayer p1 = new BasketballPlayer(180,120);
+				
+	}
+
+}

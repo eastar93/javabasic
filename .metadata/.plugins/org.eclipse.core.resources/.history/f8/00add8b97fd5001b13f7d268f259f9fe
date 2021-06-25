@@ -1,0 +1,22 @@
+package Overloading;
+
+public class OverTest {
+	
+	public static OverTest()
+	{
+		System.out.printf("출력 1 : %s, %d", "0",1);
+	}
+	public static OverTest(String a)
+	{
+		System.out.printf("출력2 : %s, %d", a, 2);
+	}
+	public static OverTest(int b)
+	{
+		System.out.printf("출력3 : %s, %d", "3", 2);
+	}
+	public static OverTest(String a, int b)
+	{
+		System.out.printf("출력4 : %s, %d", a, b);
+	}
+
+}

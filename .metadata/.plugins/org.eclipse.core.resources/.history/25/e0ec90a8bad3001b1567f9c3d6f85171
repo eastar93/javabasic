@@ -1,0 +1,12 @@
+
+package Ver01;
+
+public class MainS {
+	
+	public static void main(String[] args) {
+		
+		StarCraft unit1 = new StarCraft("Terran", "Nomal", "Marine", "Small", 40, 0, 6, 0);
+		unit1.Stimpack();
+		
+	}
+}

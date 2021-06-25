@@ -1,0 +1,11 @@
+package Ver02;
+
+public class StarCraft {
+	
+	public static void main(String[] args) {
+		
+		MarineBe m1 = new MarineBe();
+		m1.getInfo();
+		
+	}
+}

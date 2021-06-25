@@ -1,0 +1,10 @@
+package Overloading;
+
+public class Elf extends Monster {
+	
+	public Elf() 
+	{
+		super("엘프", 30, 3, 1);
+	}
+
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.security.sasl.SaslClient"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Scanner01"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="Constructor.StarCraft"/>
+<fullyQualifiedTypeName name="Structure.PersonClass"/>
+<fullyQualifiedTypeName name="Structure.FruitClass"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="Inheritance.Salaryman"/>
+<fullyQualifiedTypeName name="ThisKeyword.Person"/>
+<fullyQualifiedTypeName name="AccessModifier02.Child"/>
+<fullyQualifiedTypeName name="AccessModifier02.Parent"/>
+<fullyQualifiedTypeName name="Inheritance.game.Commoner"/>
+<fullyQualifiedTypeName name="AccessModifier.game.ProtectedCommoner"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="BuyandSell.Buyer"/>
+<fullyQualifiedTypeName name="BuyandSell.Customer01"/>
+<fullyQualifiedTypeName name="BuyandSell.MSeller"/>
+<fullyQualifiedTypeName name="Interation.game.Unit01"/>
+<fullyQualifiedTypeName name="Interation.game.Monster01"/>
+<fullyQualifiedTypeName name="Interation.game.Monster02"/>
+<fullyQualifiedTypeName name="Interation.game.Gladiator"/>
+<fullyQualifiedTypeName name="Polymorphism.game.Goblin"/>
+<fullyQualifiedTypeName name="Overloading.Elf"/>
+<fullyQualifiedTypeName name="Polymorphism.game.Monster"/>
+</qualifiedTypeNameHistroy>

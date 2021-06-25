@@ -1,0 +1,13 @@
+package Ver02;
+
+public class StarCraft {
+	
+	public static void main(String[] args) {
+		
+		MarineBe m1 = new MarineBe();
+		MarineBe f1 = new MarineBe();
+		f1.Tribe("Terran");
+		f1.HP(50);
+		f1.getInfo();
+	}
+}

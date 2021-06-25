@@ -1,0 +1,17 @@
+package Ver02;
+
+public class StarCraft {
+	
+	public static void main(String[] args) {
+		
+		MarineBe m1 = new MarineBe();
+		m1.getInfo();
+		m1.GetHurtUltra();
+		m1.Cure();
+		m1.GetHurtHydra();
+		m1.Cure();
+		
+		
+		
+	}
+}

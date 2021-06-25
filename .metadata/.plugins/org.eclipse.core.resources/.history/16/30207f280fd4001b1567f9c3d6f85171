@@ -1,0 +1,26 @@
+package Ver02;
+
+public class StarCraft {
+	
+	public static void main(String[] args) {
+		
+		Marine m1 = new Marine();
+		m1.getInfo();
+		m1.SPUpgrade();
+		m1.getInfo();
+		m1.APUpgrade();
+		m1.getInfo();
+		m1.APUpgrade();
+		m1.getInfo();
+		m1.Cure();
+		m1.GetHurtZergling();
+		m1.SPUpgrade();
+		m1.GetHurtZergling();
+		m1.getInfo();
+		m1.GetHurtHydra();
+
+
+	}
+	
+
+}

@@ -1,0 +1,16 @@
+package Constructor;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Car car1 = new Car(150, 80, "철수");
+		Car car2 = new Car(130, 90, "영희");
+		Car car3 = new Car(80, 70, "훈이");
+		
+		//자동차 정보 조회
+		car1.getInfo();
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package Overloading;
+
+public class Field {
+
+	public static void main(String[] args) {
+		
+		Goblin G1 = new Goblin();
+	}
+}

@@ -1,0 +1,27 @@
+package Structure;
+
+public class Structure02 {
+	
+	public static void getInfo(Person p) {
+		System.out.println(p.name);
+		System.out.println(p.age);
+		System.out.println(p.pNum);
+	}
+	
+	public static void main(String[] args) {
+		// 사람을 두 명 만들어보세요(a, b)
+		
+		Person a = new Person();
+		a.name = "홍길동";
+		a.age = 99;
+		a.pNum = "010-1234-5678";
+		
+		Person b = new Person();
+		b.name = "아무개";
+		a.age = 87;
+		a.pNum = "010-8765-4321";
+		
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package BuyandSell;
+
+public class WSeller {
+	
+	private int money;
+	private int watermellon;
+
+	public WSeller(int watermellon)
+	{
+		this.money = 0;
+		this.watermellon = watermellon;
+	}
+	
+	public void SellWatermellon(int w)
+	{
+		if(this.watermellon<0)
+		{
+			System.out.printf("%d개 만큼의 수박이 없습니다.");
+			System.out.println("---------------------");
+			return;
+		}
+		money+=(w*1000);
+		watermellon-=w;
+		System.out.printf("남은 수박은 %d통입니다.%n",watermellon);
+		System.out.printf("벌어들인 돈은 %d원입니다.%n",money);
+		System.out.println("---------------------");
+	}
+
+	public int getWatermellon() {
+		return watermellon;
+	}
+	
+}

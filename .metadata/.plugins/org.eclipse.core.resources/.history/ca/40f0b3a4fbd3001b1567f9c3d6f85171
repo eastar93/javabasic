@@ -1,0 +1,10 @@
+package date210623.method;
+
+public class Main02 {
+	
+	public static void main(String[] args) {
+		
+		System.out.println(getBMI(175, 64));
+	}
+
+}

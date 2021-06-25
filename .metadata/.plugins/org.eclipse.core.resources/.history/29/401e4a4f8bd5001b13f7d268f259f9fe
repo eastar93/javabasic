@@ -1,0 +1,8 @@
+package Polymorphism.game;
+
+public class Goblin extends Monster {
+	
+}
+
+	
+	

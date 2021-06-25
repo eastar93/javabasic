@@ -1,0 +1,23 @@
+package BuyandSell;
+
+public class MSeller {
+	
+	private int mango;
+	private int money;
+	
+	public MSeller(int mango) 
+	{	
+		this.mango = mango;
+		this.money = 0;
+	}
+	
+	public void SellMango(int m) 
+	{
+		if(this.mango < m)
+		{
+			System.out.printf("%d개 만큼의 망고는 없습니다.",m);
+			System.out.println("----------------------");
+		}
+	}
+
+}

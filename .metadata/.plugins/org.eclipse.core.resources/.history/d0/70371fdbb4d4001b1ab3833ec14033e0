@@ -1,0 +1,34 @@
+package BuyandSell;
+
+public class Main02 {
+	
+	public static void main(String[] args) {
+		
+		//상인 2개 만들기
+		
+		//구매자 1개 만들기
+		
+		//구매자 정보 확인
+		
+		//1번 상인 정보 확인
+		
+		//2번 상인 정보 확인
+		
+		//1번 상인에게 구매자가 망고 구매
+		
+		//구매자 정보 확인
+		
+		//1번 상인 정보 확인
+		
+		//2번 상인 정보 확인
+		Customer01 cs1 = new Customer01(10000);
+		MSeller ms1 = new MSeller(5);
+		OSeller os1 = new OSeller(7);
+		cs1.buyMango(ms1, 3);
+		cs1.showBuyer();
+		cs1.buyOrange(os1, 2);
+	
+		
+	}
+
+}

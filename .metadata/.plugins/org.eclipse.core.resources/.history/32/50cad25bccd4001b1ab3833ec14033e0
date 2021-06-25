@@ -1,0 +1,102 @@
+package Interation.game;
+
+public class Monster01 {
+	
+	private int Hp;
+	private int Atk;
+	private int Def;
+	private int GiExp;
+
+	public Monster01()
+	{
+		this.Hp = 10;
+		this.Atk = 3;
+		this.Def = 1; 
+		this.GiExp = 3;
+	}
+	
+	public void getMon1Info()
+	{
+		System.out.printf("M1의 체력은 %d입니다.%n",Hp);
+		System.out.printf("M1의 공격력은 %d입니다.%n",Atk);
+		System.out.printf("M1의 방어력은 %d입니다.%n",Def);
+		System.out.println("---------------------");
+	}
+	
+	public void huntU1(Unit01 u1)
+	{
+		if(Hp<0)
+		{
+			System.out.println("몬스터1이 사망하였습니다.");
+			System.out.println("---------------------");
+		}
+		if(u1.getHp() <= 0)
+		{
+			System.out.println("U1이 사망하였습니다.");
+			
+		}
+		if(Atk>u1.getDef())
+		{
+			u1.setHp(Atk);
+			u1.getUn1Info();
+		}	
+		
+	}
+	
+	public void huntU2(Unit02 u2)
+	{
+		if(Hp<0)
+		{
+			System.out.println("몬스터1이 사망하였습니다.");
+			System.out.println("---------------------");
+			return;
+		}
+		if(Atk>u2.getDef())
+		{
+			u2.setHp(Atk);
+			u2.getUn2Info();
+		}	
+	}
+	
+	public void huntU3(Unit03 u3)
+	{
+		if(Hp<0)
+		{
+			System.out.println("몬스터1이 사망하였습니다.");
+			System.out.println("---------------------");
+			return;
+		}
+		if(Atk>u3.getDef())
+		{
+			u3.setHp(Atk);
+			u3.getUn3Info();
+		}	
+	}
+	
+	public int getHp() {
+		return Hp;
+	}
+	public int getAtk() {
+		return Atk;
+	}
+	public int getDef() {
+		return Def;
+	}
+	public int getGiExp() {
+		return GiExp;
+	}
+
+
+	public void setHp(int A) {
+		Hp += (Def-A);
+	}
+	public void setAtk(int atk) {
+		Atk = atk;
+	}
+	public void setDef(int def) {
+		Def = def;
+	}
+	public void setGiExp(int GE) {
+		GiExp = 3;
+	}
+}

@@ -1,0 +1,31 @@
+package Structure;
+
+public class PersonClass {
+	
+	/*
+	 * 사람 정보를 Person처럼 정의해주세요.
+	 * 여러분들이 추가하고 싶은 특성을 하나 더해주세요.
+	 */
+	
+	public String name;
+	public int age;
+	public String address;
+	public String pNum;
+	public boolean glasses;
+
+	/*
+	 * 추가로 아까의 조회 메서드를 내부에 생성해주세요.
+	 * 클래스 내부에 생성할 때는 static이 필요 없습니다.
+	 */
+	
+	public void getInfo(PersonClass p) {
+		
+		System.out.println(p.name);
+		System.out.println(p.age);
+		System.out.println(p.address);
+		System.out.println(p.pNum);
+		System.out.println(p.glasses);
+	}
+}
+
+
