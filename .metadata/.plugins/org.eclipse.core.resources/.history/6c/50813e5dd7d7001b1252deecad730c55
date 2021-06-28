@@ -1,0 +1,10 @@
+package Casting;
+
+public class Rabbit extends Animal {
+	
+	public Rabbit()
+	{
+		super("Rabbit", 3);
+	}
+
+}

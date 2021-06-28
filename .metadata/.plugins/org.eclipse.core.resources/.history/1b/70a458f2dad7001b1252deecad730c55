@@ -1,0 +1,11 @@
+package Casting;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Animal r1 = new Rabbit()
+		
+	}
+
+}

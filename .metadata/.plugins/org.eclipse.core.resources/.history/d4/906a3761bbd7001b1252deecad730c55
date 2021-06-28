@@ -1,0 +1,34 @@
+package Polymorphism.game;
+
+import Interation.game.Gladiator;
+
+public class Elf extends Monster {
+	
+	public Elf() 
+	{
+		super("Elf",30,7,1);
+	}
+
+	public void huntWr(Warrior Wr)
+	{
+		if (Wr.getHp()<=0)
+		{
+			System.out.println("검사는 이미 죽은 유닛입니다.");
+			System.out.println("----------------------------------------------");
+			return;
+		}
+		Wr.setHp(atk);
+		if(atk<=Wr.getDef())
+		{
+			System.out.println("검사는 엘프의 방어력이 높아 데미지를 못입혔습니다.");
+			System.out.println("----------------------------------------------");
+		}
+		else if(Wr.getHp()>0)
+		{
+			System.out.printf("엘프가 검사에게 %d만큼의 데미지를 주었습니다.%n",getAtk()-Wr.getDef());
+			System.out.println("----------------------------------------------");
+			Wr.MonsterData();			
+		}
+	}
+
+}

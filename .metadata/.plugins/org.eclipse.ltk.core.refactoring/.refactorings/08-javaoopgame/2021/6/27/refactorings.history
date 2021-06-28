@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Polymorphism.game.Monster.java&apos; to &apos;Hero.java&apos;&#x0D;&#x0A;- Original project: &apos;08-javaoopgame&apos;&#x0D;&#x0A;- Original element: &apos;Polymorphism.game.Monster.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Polymorphism.game.Hero.java&apos;" description="Rename compilation unit &apos;Monster.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;Polymorphism.game{Monster.java" name="Hero.java" references="false" stamp="1624856552903" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+package Polymorphism.game;
+
+public class Warrior extends Hero {
+	
+	public Warrior() 
+	{
+		super("Warrior",50,30,7,1,0);
+	}
+	
+	
+
+	
+}

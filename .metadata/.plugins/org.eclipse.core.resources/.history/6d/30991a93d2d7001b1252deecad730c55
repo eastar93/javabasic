@@ -1,0 +1,34 @@
+package Polymorphism.game;
+
+public class Field {
+
+	public static void main(String[] args) {
+		
+		Goblin G1 = new Goblin();
+		Elf E1 = new Elf();
+		Warrior W1 = new Warrior();
+		W1.hunt(E1);
+		W1.hunt(E1);
+		W1.hunt(E1);
+		W1.hunt(E1);
+		W1.hunt(E1);
+		W1.HeroData();
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.hunt(G1);
+		W1.HeroData();
+		
+		
+		
+	}
+}

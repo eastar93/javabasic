@@ -1,0 +1,54 @@
+package Polymorphism.game;
+
+public class Monster {
+	
+	private String name;
+	private int level;
+	private int hp;
+	private int atk;
+	private int def;
+	private int exp;
+	
+
+	
+	
+	public String getName() {
+		return name;
+	}
+	public int getHp() {
+		return hp;
+	}
+	public int getDHp() {
+		return hp=0;
+	}
+	public int getAtk() {
+		return atk;
+	}
+	public int getDef() {
+		return def;
+	}
+	public int getExp() {
+		return exp;
+	}
+	
+	public void setHp(int A) {
+		if((hp+(def-A))<0)
+		{
+			hp=0;
+		}
+		else if((def-A)<0)
+		{
+			hp += (def-A);
+		}
+	}
+	public void setAtk(int Atk) {
+		atk = Atk;
+	}
+	public void setDef(int Def) {
+		def = Def;
+	}
+	public void setExp(int Exp) {
+		exp += Exp;
+	}
+
+}

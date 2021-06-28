@@ -1,0 +1,37 @@
+package Interation.game;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Goblin Gl1 = new Goblin();
+		Zombie Zb1 = new Zombie();
+		Ogre Og1 = new Ogre();
+		Vampire Vp1 = new Vampire();
+		Gladiator GD1 = new Gladiator();
+		DragonSlayer DS1 = new DragonSlayer();
+		Archmage AM1 = new Archmage();
+		AM1.BlackMVp(Vp1);
+		AM1.BlackMVp(Vp1);
+		AM1.BlackMVp(Vp1);
+		AM1.BlackMVp(Vp1);
+		AM1.BlackMGl(Gl1);
+		AM1.BlackMGl(Gl1);
+		AM1.BlackMZb(Zb1);
+		AM1.BlackMZb(Zb1);
+		AM1.BlackMOg(Og1);
+		AM1.BlackMOg(Og1);
+		
+		AM1.getAmInfo();
+		
+		DS1.ADMGl(Gl1);
+		DS1.ADMZb(Zb1);
+		DS1.ADMOg(Og1);
+		DS1.getDsInfo();
+		
+		
+		
+	
+		
+	}
+}

@@ -1,0 +1,43 @@
+package Polymorphism.game;
+
+public class Elf extends Monster {
+	
+	public Elf() 
+	{
+		super("Elf",30,7,1);
+	}
+
+	public void hunt(Monster monster)
+	{
+		if (monster.getHp()==0)
+		{
+			System.out.printf("%s는 이미 죽은 유닛입니다.%n", getName());
+			System.out.println("----------------------------------------------");
+			return;
+		}
+		monster.setHp(getAtk());
+		if(getAtk()<=monster.getDef())
+		{
+			System.out.printf("%s는 엘프의 방어력이 높아 데미지를 못입혔습니다.%n" ,monster.getName());
+			System.out.println("----------------------------------------------");
+		}
+		else if(monster.getHp()>0)
+		{
+			System.out.printf("엘프가 %s에게 %d만큼의 데미지를 주었습니다.%n",monster.getName(),getAtk()-monster.getDef());
+			System.out.println("----------------------------------------------");
+			monster.MonsterData();			
+		}
+		else if(monster.getDHp()<=0)
+		{
+			System.out.println("엘프가 %s에 의해 사망하였습니다.");
+			System.out.printf("경험치 %d를 얻었습니다.%n",monster.getExp());
+			if(monster.getHp()<0)
+			{
+				monster.setHp(0);
+			}
+			monster.setExp(3);
+			monster.getExp();
+			System.out.println("----------------------------------------------");
+		}
+	}
+}

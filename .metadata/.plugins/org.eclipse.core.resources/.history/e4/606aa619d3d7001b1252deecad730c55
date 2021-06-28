@@ -1,0 +1,10 @@
+package Polymorphism.game;
+
+public class Magician {
+	
+	public Warrior() 
+	{
+		super("Warrior",50,30,7,1,0);
+	}
+
+}
