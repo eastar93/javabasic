@@ -26,7 +26,9 @@
 <fullyQualifiedTypeName name="Interation.game.Monster01"/>
 <fullyQualifiedTypeName name="Interation.game.Monster02"/>
 <fullyQualifiedTypeName name="Interation.game.Gladiator"/>
-<fullyQualifiedTypeName name="Polymorphism.game.Goblin"/>
 <fullyQualifiedTypeName name="Overloading.Elf"/>
 <fullyQualifiedTypeName name="Polymorphism.game.Monster"/>
+<fullyQualifiedTypeName name="Polymorphism.game.Goblin"/>
+<fullyQualifiedTypeName name="Polymorphism.game.Elf"/>
+<fullyQualifiedTypeName name="Casting.Cat"/>
 </qualifiedTypeNameHistroy>

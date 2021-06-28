@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Hp"/>
+		<item key="selection" value="Hr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="Hp"/>
+			<item value="Ms"/>
+			<item value="Mshunt"/>
+			<item value="hunt"/>
+			<item value="monster"/>
+			<item value="엘프"/>
+			<item value="System.out.printf(&quot;엘프의 체력은 %d입니다.%n&quot;,hp);"/>
 			<item value="Gd"/>
+			<item value="Hp"/>
 			<item value="Gl"/>
 			<item value="고블린"/>
 			<item value="좀비"/>
@@ -17,20 +23,19 @@
 			<item value="SPT"/>
 			<item value="SPU"/>
 			<item value="SVT"/>
-			<item value="&#x09;&#x09;&#x09;&#x09;System.out.printf(&quot;남은 체력은 %d입니다%n&quot;,getHP());"/>
-			<item value="APT "/>
-			<item value="ASV"/>
-			<item value="AU"/>
-			<item value="AS"/>
-			<item value="SPV"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Hr"/>
+			<item value="huntMs"/>
+			<item value="Mshunt"/>
+			<item value="Ms"/>
+			<item value="검사"/>
+			<item value="고블린"/>
 			<item value="hp"/>
 			<item value="Gl"/>
 			<item value="Vp"/>
 			<item value="Zb"/>
 			<item value="좀비"/>
-			<item value="고블린"/>
 			<item value="오우거"/>
 			<item value="Og"/>
 		</list>

@@ -23,7 +23,7 @@ public class Main {
 		
 		//근본이 Animal인 경우는 다른 타입으로 변형이 안됩니다.
 		Cat cat2 = (Cat)a1;
-		cat2.sit();
+		cat2.meow();
 		
 	}
 }
