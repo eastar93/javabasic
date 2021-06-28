@@ -2,14 +2,12 @@ package Polymorphism.game;
 
 public class Goblin extends Monster {
 	
-	public Goblin(String name, int hp, int atk, int def) 
+	public Goblin() 
 	{
-		super(name,hp,atk,def);
+		super("Goblin",50,9,3,7);
 	}
 	
-	
-	
-	
+		
 }
 
 

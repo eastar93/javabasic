@@ -2,9 +2,10 @@ package Polymorphism.game;
 
 public class Elf extends Monster {
 	
-	public Elf(String name, int hp, int atk, int def) 
+	public Elf() 
 	{
-		super(name,hp,atk,def);
-	}
+		super("Elf",30,7,1,3);
+	}	
 
+	
 }
