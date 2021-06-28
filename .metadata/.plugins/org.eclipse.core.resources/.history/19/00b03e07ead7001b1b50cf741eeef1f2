@@ -1,0 +1,19 @@
+package Static02;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Asean A1 = new Asean(75, 80, 100);
+		Asean A2 = new Asean(75, 80, 100);
+		Asean A3 = new Asean(75, 80, 100);
+		Asean A4 = new Asean(75, 80, 100);
+		A1.showAseanInfo();
+		A2.showAseanInfo();
+		A3.showAseanInfo();
+		A4.showAseanInfo();
+		
+		
+	}
+
+}
