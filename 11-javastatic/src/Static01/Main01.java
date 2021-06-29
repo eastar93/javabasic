@@ -6,6 +6,5 @@ public class Main01 {
 		StaticTest s1 = new StaticTest();
 		StaticTest s2 = new StaticTest();
 		StaticTest s3 = new StaticTest();
-		
 	}
 }
