@@ -1,6 +1,6 @@
 package Polymorphism.game;
 
-public class Monster {
+public abstract class Monster {
 	
 	private String name;
 	private int hp;
@@ -8,12 +8,12 @@ public class Monster {
 	private int def;
 	private int exp;
 	
-	public Monster(String na, int h, int at, int de, int ex) {
-		this.name = na;
-		this.hp = h;
-		this.atk = at;
-		this.def = de;
-		this.exp = ex;
+	public Monster(String name, int hp, int atk, int def, int exp) {
+		this.name = name;
+		this.hp = hp;
+		this.atk = atk;
+		this.def = def;
+		this.exp = exp;
 	}
 	
 	
@@ -25,36 +25,36 @@ public class Monster {
 		System.out.println("----------------------------------------------");
 	}
 	
-	public void doBattle(Hero hr)
-	{
-		if (hr.getExp()>0 && hr.getHp()<=0)
-		{
-			System.out.printf("%s는(은) 이미 죽은 유닛입니다.%n", hr.getName());
-			System.out.println("----------------------------------------------");
-			return;
-		}
-		hr.setHp(getAtk());
-		if(getAtk()<=hr.getDef())
-		{
-			System.out.printf("%s는 %s의 방어력이 높아 데미지를 못입혔습니다.%n" ,hr.getName(),name);
-			System.out.println("----------------------------------------------");
-		}
-		else if(hr.getHp()>0)
-		{
-			System.out.printf("%s가 %s에게 %d만큼의 데미지를 주었습니다.%n",name,hr.getName(),getAtk()-hr.getDef());
-			System.out.println("----------------------------------------------");
-			hr.HeroData();			
-		}
-		else if(hr.getDHp()<=0)
-		{
-			System.out.printf("%s가 %s에 의해 사망하였습니다.%n",hr.getName(),name);
-			if(hr.getHp()<0)
-			{
-				hr.setHp(0);
-			}
-			System.out.println("----------------------------------------------");
-		}
-	}	
+	public abstract void doBattle(Hero hr);
+//	{
+//		if (hr.getExp()>0 && hr.getHp()<=0)
+//		{
+//			System.out.printf("%s는(은) 이미 죽은 유닛입니다.%n", hr.getName());
+//			System.out.println("----------------------------------------------");
+//			return;
+//		}
+//		hr.setHp(getAtk());
+//		if(getAtk()<=hr.getDef())
+//		{
+//			System.out.printf("%s는 %s의 방어력이 높아 데미지를 못입혔습니다.%n" ,hr.getName(),name);
+//			System.out.println("----------------------------------------------");
+//		}
+//		else if(hr.getHp()>0)
+//		{
+//			System.out.printf("%s가 %s에게 %d만큼의 데미지를 주었습니다.%n",name,hr.getName(),getAtk()-hr.getDef());
+//			System.out.println("----------------------------------------------");
+//			hr.HeroData();			
+//		}
+//		else if(hr.getDHp()<=0)
+//		{
+//			System.out.printf("%s가 %s에 의해 사망하였습니다.%n",hr.getName(),name);
+//			if(hr.getHp()<0)
+//			{
+//				hr.setHp(0);
+//			}
+//			System.out.println("----------------------------------------------");
+//		}
+//	}	
 	
 		
 		
