@@ -14,9 +14,8 @@ public class LottoNum {
 			{
 				if(lotto[i]==lotto[j])
 				{
-					lotto[j]=(int)((Math.random()*45)+1);
+					
 				}
-				
 			}
 		}
 		System.out.println(Arrays.toString(lotto));
