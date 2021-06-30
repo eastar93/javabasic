@@ -25,13 +25,17 @@ public class String03 {
 		//마지막으로 발견된 지점
 		int fidx = -1;
 		
-		while(bool)
-		{
+		while(bool) {
+			int result = all.indexOf(voca, fidx+1);
+			if(result == -1) {
+				bool = false;	
+			} else {
+				fidx = result;
 				count++;
-				int result = all.indexOf(voca);
-				System.out.printf("%d번에서 %d번째 %s가 검출되었습니다.%n",all.indexOf(voca), count, voca);
-				System.out.printf("%s가 총 출현한 횟수는 %s회입니다.%n", voca, count);
-				bool = false;			
-		}		
-	}
+				System.out.printf("%d번에서 %d번째 %s가 검출되었습니다.%n",result, count, voca);
+			}
+		}
+		System.out.printf("%s가 총 출현한 횟수는 %s회입니다.%n", voca, count);				
+	}		
 }
+
