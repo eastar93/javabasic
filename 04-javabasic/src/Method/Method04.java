@@ -1,4 +1,4 @@
-package method;
+package Method;
 
 public class Method04 {
 	

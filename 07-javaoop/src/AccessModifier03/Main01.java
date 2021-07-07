@@ -1,6 +1,6 @@
 package accessModifier03;
 
-import accessModifier02.Child01;
+import AccessModifier02.Child01;
 
 public class Main01 {
 	
