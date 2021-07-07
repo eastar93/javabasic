@@ -29,7 +29,6 @@ public class Lotto01 {
 		int bnum;
 		bnum = (int)(Math.random()*45)+1;
 		
-		System.out.print("2등 당첨 번호 : ");
-		System.out.println(bnum+1);
+		System.out.println("2등 당첨 번호 : " + bnum);
 	}
 }
