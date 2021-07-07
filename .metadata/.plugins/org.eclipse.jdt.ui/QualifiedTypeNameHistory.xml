@@ -2,13 +2,9 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.security.sasl.SaslClient"/>
 <fullyQualifiedTypeName name="Scanner01"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="Constructor.StarCraft"/>
 <fullyQualifiedTypeName name="Structure.PersonClass"/>
 <fullyQualifiedTypeName name="Structure.FruitClass"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="Inheritance.Salaryman"/>
 <fullyQualifiedTypeName name="ThisKeyword.Person"/>
 <fullyQualifiedTypeName name="AccessModifier02.Child"/>
@@ -29,7 +25,6 @@
 <fullyQualifiedTypeName name="Polymorphism.game.Elf"/>
 <fullyQualifiedTypeName name="Casting.Cat"/>
 <fullyQualifiedTypeName name="Static01.StaticTest"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="Final03.Country"/>
 <fullyQualifiedTypeName name="Interface.Train"/>
@@ -38,5 +33,17 @@
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Byte"/>
+<fullyQualifiedTypeName name="Arrays01.Arrays01"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="Ramdom01.Random02"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

@@ -23,8 +23,7 @@ public class ArrayList01 {
 		//1번 인덱스 이후로 다 한 칸씩 뒤로 밀고 빈 공간에 자료 저장
 		list1.add(1, 100);
 		System.out.println(list1);
-		list1.add(1, 99);
+		list1.set(1, 99);
 		System.out.println(list1);
-	
 	}
 }
