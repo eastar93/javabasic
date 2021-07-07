@@ -1,4 +1,4 @@
-package bonus;
+package Bonus;
 
 public class Bonus {
 	

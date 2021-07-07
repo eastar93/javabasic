@@ -1,4 +1,4 @@
-package bonus;
+package Bonus;
 import java.util.Scanner;
 
 public class Bonus3 {

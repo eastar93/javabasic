@@ -1,4 +1,4 @@
-package quiz;
+package Quiz;
 
 public class Q1 {	
 	
