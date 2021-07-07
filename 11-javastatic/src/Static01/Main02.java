@@ -1,4 +1,4 @@
-package static01;
+package Static01;
 
 public class Main02 {
 	

@@ -1,4 +1,4 @@
-package casting;
+package Casting;
 
 public class Main {
 	

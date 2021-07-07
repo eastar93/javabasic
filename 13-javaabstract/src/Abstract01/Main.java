@@ -1,4 +1,4 @@
-package abstract01;
+package Abstract01;
 
 public class Main {
 	

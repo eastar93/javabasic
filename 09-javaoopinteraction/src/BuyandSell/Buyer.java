@@ -1,4 +1,4 @@
-package buyandSell;
+package BuyandSell;
 
 public class Buyer {
 	//구매자

@@ -1,4 +1,4 @@
-package final01;
+package Final01;
 
 public class Final01Main {
 	
