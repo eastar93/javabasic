@@ -1,4 +1,4 @@
-package BuyandSell;
+package buyandSell;
 
 public class OSeller {
 	

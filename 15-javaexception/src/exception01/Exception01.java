@@ -1,4 +1,4 @@
-package Exception01;
+package exception01;
 
 public class Exception01 {
 	//예외 발생 케이스 1.

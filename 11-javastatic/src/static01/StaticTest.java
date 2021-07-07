@@ -1,4 +1,4 @@
-package Static01;
+package static01;
 
 public class StaticTest {
 	//static이 안 붙은 변수는 객체가 개별적으로 가지는 변수입니다.

@@ -1,4 +1,4 @@
-package Casting;
+package casting;
 
 public class Rabbit extends Animal {
 	

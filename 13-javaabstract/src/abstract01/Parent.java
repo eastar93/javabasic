@@ -1,4 +1,4 @@
-package Abstract01;
+package abstract01;
 
 //추상 클래스.
 //abstract선언이 붙은 클래스는 new를 이용한

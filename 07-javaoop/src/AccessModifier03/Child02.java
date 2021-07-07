@@ -1,6 +1,6 @@
 package accessModifier03;
 
-import AccessModifier02.Parent;
+import accessModifier02.Parent;
 
 //Child02는 accessmodifier03 패키지 소속
 //Parent는 accessmodifier02 패키지 소속으로
