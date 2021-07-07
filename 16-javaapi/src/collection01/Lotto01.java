@@ -3,7 +3,6 @@ package collection01;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Lotto01 {
 	
@@ -16,20 +15,20 @@ public class Lotto01 {
 		//Collections.sort(리스트); 를 이용해 정렬합니다.
 		
 		List<Integer> lotto = new ArrayList<>();
-		Random num = new Random();
-		int n = 0;
-		while(n<6)
+		int lnum = 0;
+		while(lotto.size() !=6)
 		{
-			int lnum = num.nextInt(45);
-			n++;
-			lotto.add(lnum+1);
+			lnum = (int)(Math.random()*45)+1;
+			if(!lotto.contains(lnum)) {
+				lotto.add(lnum);
+			}
 		}
-		int bnum = num.nextInt(45);
-		
 		Collections.sort(lotto);
+		System.out.println("추첨 된 번호 : " + lotto);
+
+		int bnum;
+		bnum = (int)(Math.random()*45)+1;
 		
-		System.out.print("추첨 된 번호 : ");
-		System.out.println(lotto);
 		System.out.print("2등 당첨 번호 : ");
 		System.out.println(bnum+1);
 	}
