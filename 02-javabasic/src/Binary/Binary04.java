@@ -1,4 +1,4 @@
-package Binary;
+package binary;
 
 public class Binary04 {
 	

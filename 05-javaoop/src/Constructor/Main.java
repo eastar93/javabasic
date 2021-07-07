@@ -1,4 +1,4 @@
-package Constructor;
+package constructor;
 
 //import Structure.PersonClass;
 //패키지는 "."로 구분한다.

@@ -1,4 +1,4 @@
-package Garbage;
+package garbage;
 
 public class Item {
 	

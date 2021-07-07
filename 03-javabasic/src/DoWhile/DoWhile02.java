@@ -1,4 +1,4 @@
-package DoWhile;
+package doWhile;
 import java.util.Scanner;
 
 public class DoWhile02 {

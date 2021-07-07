@@ -1,4 +1,4 @@
-package Unary;
+package unary;
 
 public class Unary02 {
 	

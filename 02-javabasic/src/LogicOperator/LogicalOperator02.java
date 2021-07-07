@@ -1,4 +1,4 @@
-package LogicOperator;
+package logicOperator;
 
 public class LogicalOperator02 {
 	

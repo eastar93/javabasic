@@ -1,4 +1,4 @@
-package SuperClass;
+package superClass;
 
 // 초음속 비행기는 비행기를 상속합니다.
 public class SuperSonicAirplane extends Airplane{

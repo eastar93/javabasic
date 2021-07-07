@@ -1,4 +1,4 @@
-package SwtichCase;
+package swtichCase;
 import java.util.Scanner;
 
 public class SwitchCase02 {

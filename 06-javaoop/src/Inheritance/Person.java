@@ -1,4 +1,4 @@
-package Inheritance;
+package inheritance;
 
 /*
  * 상속시 고려할 것은 논리구조다.

@@ -1,4 +1,4 @@
-package HeapMemory;
+package heapMemory;
 
 public class StringComparison {
 	

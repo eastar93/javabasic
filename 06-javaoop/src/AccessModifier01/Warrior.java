@@ -1,4 +1,4 @@
-package AccessModifier01;
+package accessModifier01;
 
 public class Warrior {
 	//ID, 체력, 공격력, 레벨, 경험치 속성 추가

@@ -1,4 +1,4 @@
-package HeapMemory;
+package heapMemory;
 
 import java.util.Arrays;
 

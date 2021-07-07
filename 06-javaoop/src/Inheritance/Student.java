@@ -1,4 +1,4 @@
-package Inheritance;
+package inheritance;
 
 public class Student extends Person {
 	//공통 속성(이름, 나이)이 아닌 학생만의 개별적 특성 정의

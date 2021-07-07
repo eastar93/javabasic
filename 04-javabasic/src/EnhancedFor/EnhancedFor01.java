@@ -1,4 +1,4 @@
-package EnhancedFor;
+package enhancedFor;
 
 public class EnhancedFor01 {
 	

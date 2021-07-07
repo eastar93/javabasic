@@ -1,4 +1,4 @@
-package ThisKeyword;
+package thisKeyword;
 
 public class Person {
 	//사람의 정보를 여기에 기입합니다.

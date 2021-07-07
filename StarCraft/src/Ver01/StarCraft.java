@@ -1,4 +1,4 @@
-package Ver01;
+package ver01;
 
 public class StarCraft {
 	

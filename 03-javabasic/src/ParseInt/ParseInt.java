@@ -1,4 +1,4 @@
-package ParseInt;
+package parseInt;
 
 public class ParseInt {
 	

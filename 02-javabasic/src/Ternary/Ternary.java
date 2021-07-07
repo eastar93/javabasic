@@ -1,4 +1,4 @@
-package Ternary;
+package ternary;
 
 public class Ternary {
 	

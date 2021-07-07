@@ -1,4 +1,4 @@
-package SuperClass;
+package superClass;
 
 public class Main01 {
 	

@@ -1,4 +1,4 @@
-package SwtichCase;
+package swtichCase;
 
 public class SwitchCase01 {
 	

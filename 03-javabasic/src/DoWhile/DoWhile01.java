@@ -1,4 +1,4 @@
-package DoWhile;
+package doWhile;
 
 public class DoWhile01 {
 	
