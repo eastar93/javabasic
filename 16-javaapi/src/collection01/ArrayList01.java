@@ -25,6 +25,6 @@ public class ArrayList01 {
 		System.out.println(list1);
 		list1.add(1, 99);
 		System.out.println(list1);
-				
+		
 	}
 }
