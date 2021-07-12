@@ -26,9 +26,10 @@ public class Lotto01 {
 		Collections.sort(lotto);
 		System.out.println("추첨 된 번호 : " + lotto);
 
-		int bnum;
-		bnum = (int)(Math.random()*45)+1;
+		while(lotto.contains(lnum)) {
+			lnum = (int)(Math.random()*45)+1;			
+		}
 		
-		System.out.println("2등 당첨 번호 : " + bnum);
+		System.out.println("2등 당첨 번호 : " + lnum);
 	}
 }
