@@ -25,7 +25,6 @@
 <fullyQualifiedTypeName name="Polymorphism.game.Elf"/>
 <fullyQualifiedTypeName name="Casting.Cat"/>
 <fullyQualifiedTypeName name="Static01.StaticTest"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="Final03.Country"/>
 <fullyQualifiedTypeName name="Interface.Train"/>
 <fullyQualifiedTypeName name="Interface.Airplane"/>
@@ -43,8 +42,11 @@
 <fullyQualifiedTypeName name="java.util.Calendar"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Ramdom01.Random02"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>
