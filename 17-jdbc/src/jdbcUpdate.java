@@ -24,7 +24,7 @@ public class jdbcUpdate {
 		
 		stmt = con.createStatement();
 		// 쿼리문이 길다면 아래와 같이 + 로 여러줄로 나눠 연결합니다.
-		String sql = "UPDATE JDBCInsert SET str='" + a + "'" +
+		String sql = "UPDATE JDBC Insert SET str='" + a + "'" +
 				" WHERE num=" + n;
 		System.out.println(sql);
 		// SELECT문은 executeQuery(sql구문); 형식으로 호출하지만
