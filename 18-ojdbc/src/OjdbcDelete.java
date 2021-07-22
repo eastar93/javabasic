@@ -30,8 +30,8 @@ public class OjdbcDelete {
 			// 1. PreparedStatement 구문은 쿼리문을 먼저 만들고 시작합니다.
 			// 기존의 자바 변수가 들어갈 자리에 ?로 대신해서 작성합니다.
 			// 자료형 막론하고 문자열에도 '를 붙이지 않고 ?로만 처리하면 됩니다.
-			String ora = "DELETE FROM ojdbctest WHERE (num) = (?)";
-			System.out.println(ora);
+			String ora = "DELETE FROM ojdbctest WHERE num = (?)";
+	
 			// 2. 만든 쿼리문의 ? 자리에 적용할 자바 변수를 집어넣습니다.
 			// pstmt변수를 생성해놓은 다음, set자료형(?순서, 집어넣을 변수)
 			// 를 이용해 ?를 모두 채워줍니다.
