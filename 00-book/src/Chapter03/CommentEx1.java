@@ -8,7 +8,7 @@ package Chapter03;
  *
  */
 
-public class CommentEx1 {
+class CommentEx1 {
 	
 	public static void main(String[] args) {
 		

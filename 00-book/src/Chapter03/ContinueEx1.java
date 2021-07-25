@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class ContinueEx1 {
+class ContinueEx1 {
 
 	public static void main(String[] args) {
 		

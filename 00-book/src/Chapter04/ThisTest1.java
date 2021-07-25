@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class ThisTest1 {
+class ThisTest1 {
 	
 	int a = 100;
 	public void setA(int a) {

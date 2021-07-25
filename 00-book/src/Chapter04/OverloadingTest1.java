@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class OverloadingTest1 {
+class OverloadingTest1 {
 	
 	public void intLength(int a) {
 		String s = String.valueOf(a);

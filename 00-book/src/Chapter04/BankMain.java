@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class BankMain {
+class BankMain {
 	
 	public static void main(String[] args) {
 		

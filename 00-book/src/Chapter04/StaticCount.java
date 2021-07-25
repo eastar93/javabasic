@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class StaticCount {
+class StaticCount {
 	
 	int c;
 	static int count;

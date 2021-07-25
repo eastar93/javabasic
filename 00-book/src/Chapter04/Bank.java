@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class Bank {
+class Bank {
 	
 	private String point; // 은행 위치
 	static float interest; // 은행 이자

@@ -1,6 +1,6 @@
 package Chapter01;
 
-public class InterTest {
+class InterTest {
 
 	public static void main(String[] args) {
 		

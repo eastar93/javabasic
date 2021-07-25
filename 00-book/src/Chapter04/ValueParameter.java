@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class ValueParameter {
+class ValueParameter {
 
 	public int increase(int n) {
 

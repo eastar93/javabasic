@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class StaticTest5 {
+class StaticTest5 {
 	
 	int a = 100;
 	static int b = 200;

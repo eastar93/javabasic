@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class ReferenceParameter {
+class ReferenceParameter {
 	
 	public void increase(int[] n) {
 		for(int i = 0; i < n.length; i++)

@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class OperTest2 {
+class OperTest2 {
 	
 	public static void main(String[] args) {
 		

@@ -1,7 +1,7 @@
 package Chapter04;
 
-public class MethodEx2 {
-	
+class MethodEx2 {
+
 	int var;
 	
 	public void setInt(int var) {

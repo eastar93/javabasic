@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class WhileEx1 {
+class WhileEx1 {
 	
 	public static void main(String[] args) {
 		

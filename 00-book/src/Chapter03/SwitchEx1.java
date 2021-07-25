@@ -2,7 +2,7 @@ package Chapter03;
 
 import java.util.Scanner;
 
-public class SwitchEx1 {
+class SwitchEx1 {
 	
 	public static void main(String[] args) {
 		

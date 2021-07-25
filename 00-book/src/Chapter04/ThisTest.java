@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class ThisTest {
+class ThisTest {
 	
 	public ThisTest() {
 		System.out.println("객체생성 시 : " + this);

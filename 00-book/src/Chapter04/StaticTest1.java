@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class StaticTest1 {
+class StaticTest1 {
 	
 	int a;
 	static String s;

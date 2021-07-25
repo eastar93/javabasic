@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class forEx1 {
+class forEx1 {
 	
 	public static void main(String[] args) {
 		

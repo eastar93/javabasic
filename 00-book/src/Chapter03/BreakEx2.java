@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class BreakEx2 {
+class BreakEx2 {
 	
 	public static void main(String[] args) {
 		

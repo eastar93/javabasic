@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class ThisConstrEx {
+class ThisConstrEx {
 	
 	String str;
 	public ThisConstrEx() {

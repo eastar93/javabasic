@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class SwitchEx2 {
+class SwitchEx2 {
 	
 	public static void main(String[] args) {
 		

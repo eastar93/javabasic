@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class IfEx1 {
+class IfEx1 {
 	
 	public static void main(String[] args) {
 		

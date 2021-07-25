@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class CharEx2 {
+class CharEx2 {
 	
 	public static void main(String[] args) {
 		

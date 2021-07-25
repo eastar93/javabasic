@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class StaticTest4 {
+class StaticTest4 {
 	
 	static {
 		System.out.println("Static init1");

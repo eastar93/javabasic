@@ -2,7 +2,7 @@ package Chapter03;
 
 import java.util.Scanner;
 
-public class GuguDanEx1 {
+class GuguDanEx1 {
 	
 	public static void main(String[] args) {
 		

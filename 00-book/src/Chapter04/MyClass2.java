@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class MyClass2 {
+class MyClass2 {
 	
 	private String name;
 	private int age;

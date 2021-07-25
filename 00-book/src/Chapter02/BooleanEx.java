@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class BooleanEx {
+class BooleanEx {
 	
 	public static void main(String[] args) {
 		

@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class FloatEx2 {
+class FloatEx2 {
 	
 	public static void main(String[] args) {
 		

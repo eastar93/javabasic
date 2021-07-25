@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class IntEx3 {
+class IntEx3 {
 	
 	public static void main(String[] args) {
 		

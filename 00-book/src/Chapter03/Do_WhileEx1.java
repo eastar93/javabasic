@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class Do_WhileEx1 {
+class Do_WhileEx1 {
 	
 	public static void main(String[] args) {
 		

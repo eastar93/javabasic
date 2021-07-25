@@ -1,6 +1,6 @@
 package Chapter03;
 
-public class MultiForEx1 {
+class MultiForEx1 {
 	
 	public static void main(String[] args) {
 		

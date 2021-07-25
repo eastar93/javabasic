@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class MyClass1 {
+class MyClass1 {
 	
 	private String name;
 	public MyClass1(String n) {

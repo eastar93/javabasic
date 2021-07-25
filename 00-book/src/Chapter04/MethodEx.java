@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class MethodEx {
+class MethodEx {
 
 	int var1, var2; // 멤버 변수들
 	

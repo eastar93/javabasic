@@ -1,6 +1,6 @@
 package Chapter02;
 
-public class OperEx5 {
+class OperEx05 {
 	
 	public static void main(String[] args) {
 		

@@ -1,6 +1,6 @@
 package Chapter04;
 
-public class VarTest {
+class VarTest {
 	
 	public void argTest(String ... n) {
 		for(int i = 0; i < n.length; i++)
