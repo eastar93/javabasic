@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +7,8 @@
 <title>구구단 출력 예제</title>
 </head>
 <body>
-	
-<% for(int i = 2; i <= 9; i++) { 
+
+	<% for(int i = 2; i <= 9; i++) { 
 	if(i%2 != 0)
 	{
 		out.println("<h2>구구단" +  i  + "단</h2><hr/>");

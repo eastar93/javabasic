@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%!
 	//Declaration
 	//jsp파일에서 사용할 멤버변수, 메서드를 선언할 때 사용.
@@ -45,18 +45,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Web프로그래밍</h2>
-<!-- p태그는 문단을 나눌 때 사용하는 태그입니다. -->
-<p>
-	페이지 누적 요청수 : <%=total %> 
-	페이지 개별 요청수 : <%=each %>
-</p>
+	<h2>Web프로그래밍</h2>
+	<!-- p태그는 문단을 나눌 때 사용하는 태그입니다. -->
+	<p>
+		페이지 누적 요청수 :
+		<%=total %>
+		페이지 개별 요청수 :
+		<%=each %>
+	</p>
 
-<p>
- 	 <h3>오늘의 행운의 숫자와 행운의 색깔</h3>
- 	 행운의 숫자 : <%= rn%>
- 	 행운의 색깔 : <%= rc%>
-</p>
+	<p>
+	<h3>오늘의 행운의 숫자와 행운의 색깔</h3>
+	행운의 숫자 :
+	<%= rn%>
+	행운의 색깔 :
+	<%= rc%>
+	</p>
 
 </body>
 </html>
