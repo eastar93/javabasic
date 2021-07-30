@@ -12,9 +12,10 @@
 		name 속성은 하나는 apple 하나는 banana로 해주세요.
 		제출 버튼, 리셋버튼 각각 하나씩 만들어주세요. 
 	-->
-	<form action="">
+	<form action="req_param_getpost.jsp">
 		<input type="text" name="apple"><br>
 		<input type="text" name="banana"><br>
+		<input type="text" name="orange"><br>
 		<input type="submit">
 		<input type="reset">
 	</form>

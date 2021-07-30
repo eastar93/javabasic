@@ -7,6 +7,8 @@
 	String id = request.getParameter("apple");
 	// name="banana" 에서 던져진 데이터를 받기 위해서는
 	String pw = request.getParameter("banana");
+	// name="orange" 에서 던져진 데이터를 받기 위해서는
+	String pwc = request.getParameter("orange");
 %>
     
 <!DOCTYPE html>
@@ -18,5 +20,6 @@
 <body>
 	아이디  : <b><%= id %></b><br/>
 	비밀번호 : <b><%= pw %></b><br/>
+	비밀번호 확인 : <b><%= pwc %></b><br/>
 </body>
 </html>
