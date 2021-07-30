@@ -8,7 +8,7 @@
 	// name="banana" 에서 던져진 데이터를 받기 위해서는
 	String pw = request.getParameter("banana");
 	// name="orange" 에서 던져진 데이터를 받기 위해서는
-	String pwc = request.getParameter("orange");
+	String nick = request.getParameter("orange");
 %>
     
 <!DOCTYPE html>
@@ -20,6 +20,6 @@
 <body>
 	아이디  : <b><%= id %></b><br/>
 	비밀번호 : <b><%= pw %></b><br/>
-	닉 : <b><%= pwc %></b><br/>
+	닉 : <b><%= nick %></b><br/>
 </body>
 </html>
