@@ -12,7 +12,5 @@ public class Arrays06 {
 
 		Arrays.sort(arr);
 		System.out.println(Arrays.toString(arr));
-
 	}
-
 }
