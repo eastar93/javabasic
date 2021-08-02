@@ -24,6 +24,5 @@
 		out.println("시간이 지나 자동 로그아웃 되었습니다.");
 		out.println("<a href=\"cookie_long.jsp\">다시 로그인</a>");
 	}
-
-
+	
 %>
