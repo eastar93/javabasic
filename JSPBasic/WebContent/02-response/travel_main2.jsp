@@ -7,7 +7,7 @@
 <title>여행 안내 페이지</title>
 </head>
 <body>
-<form action="res_check.jsp" method="get">
+<form action="travel_check.jsp" method="get">
 <table border = "1" width="700">
 	<tr>
 		<td>버튼</td>
@@ -34,7 +34,6 @@
 		<td>프랑스</td>
 		<td>파리</td>
 	</tr>
-
 </table>
 </body>
 </html>
