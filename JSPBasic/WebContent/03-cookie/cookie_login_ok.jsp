@@ -13,7 +13,6 @@
 	String checkId = request.getParameter("id_check");
 	String checkPw = request.getParameter("pw_check");
 	
-
 %>
 <!DOCTYPE html>
 <html>
@@ -39,18 +38,20 @@
 		// id, pw를 쿠키값으로 가지는 쿠키 2개를 생성해 발송까지 해주세요
 		// 단, 쿠키 발급은 checkID혹은 checkPw값이 yes인 경우에만
 		// 발급합니다.
-		// 
+		
+		// id 체크박스 
 		if(checkId != null && checkId.equals("yes")) {
-		Cookie remember_id = new Cookie("remem_id", id);
-		remember_id.setMaxAge(20);
-		response.addCookie(remember_id);
-		}
-		if(checkPw != null && checkPw.equals("yes")) {
-		Cookie remember_pw = new Cookie("remem_pw", pw);
-		remember_pw.setMaxAge(20);
-		response.addCookie(remember_pw);
+		Cookie remem_id = new Cookie("remember_id", id);
+		remem_id.setMaxAge(20);
+		response.addCookie(remem_id);
 		}
 		
+		// pw 체크박스
+		if(checkPw != null && checkPw.equals("yes")) {
+		Cookie remem_pw = new Cookie("remember_pw", pw);
+		remem_pw.setMaxAge(20);
+		response.addCookie(remem_pw);
+		}
 		//로그인 성공시 cookie_welcome.jsp로 보내주고
 		response.sendRedirect("cookie_welcome.jsp");
 	} else {
