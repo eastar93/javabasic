@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<h1>성인입니다. 주류 구매가 가능합니다.</h1>
 </body>
 </html>
