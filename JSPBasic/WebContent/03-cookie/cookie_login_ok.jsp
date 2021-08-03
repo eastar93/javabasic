@@ -12,7 +12,6 @@
 	// 2. checkbox가 체크되었는지 여부도 받아옵니다.
 	String checkId = request.getParameter("id_check");
 	String checkPw = request.getParameter("pw_check");
-	
 %>
 <!DOCTYPE html>
 <html>
@@ -29,7 +28,7 @@
 		// 지속시간은 20초 입니다.
 		// 완성 후 쿠키 발송까지 아래에 작성해주세요.
 		Cookie idCookie = new Cookie("user_id", id);
-		idCookie.setMaxAge(20);
+		idCookie.setMaxAge(1800);
 		response.addCookie(idCookie);
 		
 		// 체크박스가 체크되어 있을 경우, 아이디 비밀번호 자동입력을 위한

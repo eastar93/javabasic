@@ -21,5 +21,4 @@ public class Casting {
 		byte c = (byte) 8578728953L;
 		System.out.println(c);
 	}
-	
 }
