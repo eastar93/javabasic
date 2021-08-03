@@ -1199,3 +1199,21 @@ java.net.UnknownHostException: jope.ow2.org
 	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
 	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:18.419
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:18.419
+!MESSAGE Multiple Contexts have a path of "/JSPBasic".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:25.516
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:25.516
+!MESSAGE Multiple Contexts have a path of "/JSPBasic".
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:29.013
+!MESSAGE Could not publish server configuration for Tomcat v9.0 Server at localhost.
+!SUBENTRY 1 org.eclipse.jst.server.tomcat.core 4 0 2021-08-03 11:55:29.013
+!MESSAGE Multiple Contexts have a path of "/JSPBasic".
+
+!ENTRY org.eclipse.ui.navigator 4 0 2021-08-03 11:55:42.886
+!MESSAGE Cannot find navigator content extension (using triggerPoints) for object "<null>" parent path: "P/Servers".  Check that you have an expression for this object in a navigatorContent triggerPoints or enablement.
