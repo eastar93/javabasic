@@ -1,3 +1,5 @@
+<%@page import="kr.co.ictedu.UsersVO"%>
+<%@page import="kr.co.ictedu.UsersDAO"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -12,51 +14,15 @@
 	String uname = request.getParameter("uname");
 	String email = request.getParameter("email");
 	
+	// 기존에 있던 회원 가입 로직은 DAO클래스로 이관합니다.
+	// DAO 클래스 받아오기
+	UsersDAO dao = UsersDAO.getInstance();
 	
-	//DB연동을 위한 Connector 설정
-	// Connection 객체 생성
-	Connection con = null;
-	// 쿼리문 실행을 위한 PreparedStatement 객체 생성
-	PreparedStatement pstmt = null;
-
-	try {
-		// MySQL 과 연동할것임을 나타냄.
-		Class.forName("com.mysql.cj.jdbc.Driver");
-		
-		// 접속 URL은 jdbc:mysql://localhost/db명
-		String url = "jdbc:mysql://localhost/ict03";
-		
-		// 접속 주소, 계정, 비밀번호를 이용해 접속요청을 넣습니다.
-		con = DriverManager.getConnection(url, "root", "mysql");
-		
-		// 1. INSERT 쿼리문을 작성합니다.
-		String sql = "INSERT INTO users VALUES(?, ?, ?, ?)";
-		
-		// 2. 만큰 쿼리문의 ? 자리에 적용할 자바 변수를 집어넣습니다.
-		pstmt = con.prepareStatement(sql);
-		pstmt.setString(1, uid);
-		pstmt.setString(2, upw);
-		pstmt.setString(3, uname);
-		pstmt.setString(4, email);
-		
-		//3. 만든 쿼리문 실행하기
-		pstmt.executeUpdate();
-		
-		
-	} catch(ClassNotFoundException e) {
-		System.out.println("드리아버 로딩 실패");
-	} catch(SQLException e) {
-		System.out.println("에러 : " + e);
-	} finally {
-		try {
-			if(con != null && !con.isClosed()) {
-				con.close();
-			}
-		} catch(SQLException e) {
-			e.printStackTrace();
-		}
-	}		 
-
+	// VO객체 생성 및 uid, upw, uname, email setter로 입력해주기
+	UsersVO user = new UsersVO(uid, upw, uname, email);
+	
+	dao.joinUsers(user);
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -65,6 +31,7 @@
 <title>회원 가입 페이지</title>
 </head>
 <body>
-	<h1>회원 가입을 축하합니다!</h1>
+	<h1>회원 가입을 축하합니다!</h1></br>
+	<a href="user_login_form.jsp">로그인 하러 가기</a>
 </body>
 </html>

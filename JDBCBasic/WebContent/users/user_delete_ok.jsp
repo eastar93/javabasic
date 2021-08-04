@@ -32,6 +32,7 @@
 	
 			// 3. 쿼리문 실행
 			pstmt.executeUpdate();
+			session.invalidate();
 			
 		} catch (SQLException e){
 			e.printStackTrace();
@@ -49,10 +50,13 @@
 				e.printStackTrace();
 			}
 		}
+	} else {
+		response.sendRedirect("user_login_form.jsp");
+		session.invalidate();	
 	}
 	
 	// DELETE구문이 실행된것과는 별개로 session은 따로 말소시켜야 합니다.
-	session.invalidate();
+		
 %>    
 
 <!DOCTYPE html>
