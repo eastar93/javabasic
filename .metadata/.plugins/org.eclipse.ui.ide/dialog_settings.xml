@@ -49,6 +49,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\eclipse\workspace\javabasic\98-StarCraft\src"/>
+			<item value="C:\eclipse\workspace\javabasic"/>
 			<item value="E:\신동규\eastar93\Eclipse Java\Workspace\javabasic"/>
 			<item value="C:\Users\ict03-09\Downloads\20210730\JSPBasic\WebContent1"/>
 			<item value="E:\신동규\eastar93\Eclipse Java\Workspace"/>
