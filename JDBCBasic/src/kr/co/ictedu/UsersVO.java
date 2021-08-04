@@ -16,6 +16,7 @@ public class UsersVO {
 	private String upw;
 	private String uname;
 	private String email;
+	private String idSession;
 	
 	// Alt + Shift + S 혹은 우클릭 -> source에 있는 메뉴 활용 
 	// VO클래스는 기본생성자와 모든 멤버변수를 초기화하는 생성자를 선언
@@ -63,5 +64,11 @@ public class UsersVO {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getIdSession() {
+		return idSession;
+	}
+	public void setIdSession(String idSession) {
+		this.idSession = idSession;
 	}
 }
