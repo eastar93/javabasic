@@ -54,8 +54,8 @@
 			}
 		}
 	} else {
-		response.sendRedirect("user_login_form.jsp");
 		session.invalidate();	
+		response.sendRedirect("user_login_form.jsp");
 	}
 	
 	// DELETE구문이 실행된것과는 별개로 session은 따로 말소시켜야 합니다.
