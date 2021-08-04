@@ -32,6 +32,9 @@
 	
 			// 3. 쿼리문 실행
 			pstmt.executeUpdate();
+			
+			// 세션 파기는 두 번 실행할 수 없으므로
+			// 로직당 한 번만 실행되도록 배치한다.
 			session.invalidate();
 			
 		} catch (SQLException e){
