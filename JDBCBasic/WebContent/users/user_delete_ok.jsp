@@ -1,3 +1,5 @@
+<%@page import="kr.co.ictedu.UsersVO"%>
+<%@page import="kr.co.ictedu.UsersDAO"%>
 <%@page import="java.sql.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -9,57 +11,26 @@
 	String dpw = request.getParameter("dpw");
 	String sessionId = (String)session.getAttribute("i_s");
 	
+	// 1. DAO를 생성하고 
+	UsersDAO dao = UsersDAO.getInstance();
 	
-	Connection con = null;
-	PreparedStatement pstmt = null;
+	// 2. UsersVO를 생성하되, spw, sessionId만 setter로 넣어주세요.
+	UsersVO user = new UsersVO();
+	user.setUid(sessionId);
+	user.setUpw(spw);
 	
-	if(spw.equals(dpw)){
-		// DB연결로직을 집어넣어주세요.
-		try{
-  			Class.forName("com.mysql.cj.jdbc.Driver");
-			
-			String url = "jdbc:mysql://localhost/ict03";
-			
-			con = DriverManager.getConnection(url, "root", "mysql");
-		
-			// 1. SELECT 쿼리문을 작성합니다.
-			// 입력받은 id가 실제로 DB에 존재하는지 조회하는 쿼리문을 작성해주세요.
-			String sql = "DELETE FROM users WHERE uid=?";
-			
-			// 2. 쿼리문의 ?자리에 적용할 변수를 집어넣습니다.
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, sessionId);
+	// 3. DAO의 usersDDelete 기능을 호출하면서 파라미터로 적절한 자료를
+	// 넘겨주세요.
+	int deleteResultNum = dao.usersDelete(user, dpw);
 	
-			// 3. 쿼리문 실행
-			pstmt.executeUpdate();
-			
-			// 세션 파기는 두 번 실행할 수 없으므로
-			// 로직당 한 번만 실행되도록 배치한다.
-			session.invalidate();
-			
-		} catch (SQLException e){
-			e.printStackTrace();
-		} finally{
-			// 연결 끊기
-			try {
-				if(con!=null && !con.isClosed()){
-					con.close();
-				}
-				if(pstmt!=null && !pstmt.isClosed()){
-					pstmt.close();
-				}
-	
-			} catch (SQLException e){
-				e.printStackTrace();
-			}
-		}
-	} else {
-		session.invalidate();	
+	// 4. 결과에 따라 세션만 파기할지 redirect까지 해 줄지 결정
+	if(deleteResultNum == 1) {
+		session.invalidate();
+	} else if(deleteResultNum == 0) {
+		session.invalidate();		
 		response.sendRedirect("user_login_form.jsp");
 	}
 	
-	// DELETE구문이 실행된것과는 별개로 session은 따로 말소시켜야 합니다.
-		
 %>    
 
 <!DOCTYPE html>

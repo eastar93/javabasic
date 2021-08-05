@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="Chapter06.UserExceptionTest"/>
-<fullyQualifiedTypeName name="Chapter06.UserException"/>
-<fullyQualifiedTypeName name="Chapter06.AssertTest2"/>
-<fullyQualifiedTypeName name="Chapter07.GenericEx1"/>
-<fullyQualifiedTypeName name="Chapter07.GenericEx3"/>
-<fullyQualifiedTypeName name="Chapter07.GenericEx2"/>
 <fullyQualifiedTypeName name="Chapter07.GenericEx4"/>
 <fullyQualifiedTypeName name="Chapter07.GenEx1"/>
 <fullyQualifiedTypeName name="Chapter07.GenEx3"/>
@@ -60,4 +53,11 @@
 <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.ForNode"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.UsersVO"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.UsersDAO"/>
+<fullyQualifiedTypeName name="com.mysql.cj.Session"/>
+<fullyQualifiedTypeName name="com.mysql.cj.Session.SessionEventListener"/>
 </qualifiedTypeNameHistroy>

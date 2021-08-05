@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+    pageEncoding="UTF-8"%>    
 <%
 	// 세션이 존재하면 바로 user_login_ok.jsp로 보내주는 로직을 작성해주세요.
 	String idSession = (String)session.getAttribute("i_s");

@@ -14,6 +14,7 @@ public class UsersVO {
 	 */
 	private String uid;
 	private String upw;
+	private String spw;
 	private String uname;
 	private String email;
 	private String idSession;
@@ -70,5 +71,11 @@ public class UsersVO {
 	}
 	public void setIdSession(String idSession) {
 		this.idSession = idSession;
+	}
+	public String getSpw() {
+		return spw;
+	}
+	public void setSpw(String spw) {
+		this.spw = spw;
 	}
 }
