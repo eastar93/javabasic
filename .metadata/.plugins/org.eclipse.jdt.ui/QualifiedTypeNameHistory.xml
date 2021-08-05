@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Chapter07.GenericEx4"/>
 <fullyQualifiedTypeName name="Chapter07.GenEx1"/>
 <fullyQualifiedTypeName name="Chapter07.GenEx3"/>
 <fullyQualifiedTypeName name="Chapter07.GenericEx5"/>
@@ -56,8 +55,9 @@
 <fullyQualifiedTypeName name="jdk.nashorn.internal.ir.ForNode"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-<fullyQualifiedTypeName name="kr.co.ictedu.UsersVO"/>
-<fullyQualifiedTypeName name="kr.co.ictedu.UsersDAO"/>
 <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
 <fullyQualifiedTypeName name="com.mysql.cj.Session.SessionEventListener"/>
+<fullyQualifiedTypeName name="org.apache.catalina.User"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.UsersDAO"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.UsersVO"/>
 </qualifiedTypeNameHistroy>
