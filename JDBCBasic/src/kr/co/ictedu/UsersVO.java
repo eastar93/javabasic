@@ -78,4 +78,11 @@ public class UsersVO {
 	public void setSpw(String spw) {
 		this.spw = spw;
 	}
+	
+	//이거 안 만들면 주소값으로 나옵니다.
+	public String toString() {
+		return "UsersVO [uid=" + uid + ", upw=" + upw + ", uname=" + uname + ", email=" + email + "]";
+	}
+	
+	
 }

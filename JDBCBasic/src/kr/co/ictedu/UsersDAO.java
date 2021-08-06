@@ -1,19 +1,32 @@
 package kr.co.ictedu;
 
 import java.sql.*;
+import java.util.ArrayList;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 //DAO클래스는 DB연동을 전담해 처리합니다.
 public class UsersDAO {
 	
 	// DB주소 아이디 패스워드 미리 저장
-	private static final String URL = "jdbc:mysql://localhost/ict03";
-	private static final String DBID = "root";
-	private static final String DBPW = "mysql";
 	
+	// 일반 DAO 활용시 사용하던 것들
+	//private static final String URL = "jdbc:mysql://localhost/ict03";
+	//private static final String DBID = "root";
+	//private static final String DBPW = "mysql";
+	
+	// 커넥션 풀 설정 후 사용하는 것
+	// javax.sql의 DataSource를 임포트해주세요.
+	private DataSource ds;
 	
 	// 메서드 결과에 따른 리턴값 상수로 표기
 	private static final int LOGIN_SUCCESS = 1;
 	private static final int LOGIN_FAIL = 0;
+	
+	private static final int UPDATE_SUCCESS = 1;
+	private static final int UPDATE_FAIL = 0;
 	
 	private static final int ID_DELETE_SUCCESS = 1;
 	private static final int ID_DELETE_FAIL = 0;
@@ -28,11 +41,22 @@ public class UsersDAO {
 	// 1. 외부에서 객체를 new 키워드로 만들어 쓸 수 없도록 생성자에 
 	// private을 붙여줍니다.
 	private UsersDAO() {
+		// 일반 JDBC에서 활용하던 드라이버 설정 코드
+		//try {
+		//	Class.forName("com.mysql.cj.jdbc.Driver");
+		//} catch (Exception e) {
+		//	e.printStackTrace();
+		//}
+		
+		// 커넥션 풀에서 활용하는 드라이버 설정 코드.
+		// 역시 javax.nameing의 요소를 임포트합니다.
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Context ct = new InitialContext();
+			ds = (DataSource)ct.lookup("java:comp/env/jdbc/mysql");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 	
 	// 2. 외부에서 객체생성을 못 하기 때문에 자기 클래스 내부에서 그냥
@@ -62,7 +86,11 @@ public class UsersDAO {
 		try {
 			
 			// 접속 주소, 계정, 비밀번호를 이용해 접속요청을 넣습니다.
-			con = DriverManager.getConnection(URL, DBID, DBPW);
+			// JDBC 기준 DB접속 코드
+			//con = DriverManager.getConnection(URL, DBID, DBPW);
+			
+			// 커넥션 풀 기준 DB접속 코드
+			con = ds.getConnection();
 			
 			// 1. INSERT 쿼리문을 작성합니다.
 			String sql = "INSERT INTO users VALUES(?, ?, ?, ?)";
@@ -104,8 +132,11 @@ public class UsersDAO {
 		
 			//DB연결 로직을 집어넣어주세요
 			try {
-				Class.forName("com.mysql.cj.jdbc.Driver");
-				con = DriverManager.getConnection(URL, DBID, DBPW);
+				// JDBC 기준 DB접속 코드
+				//con = DriverManager.getConnection(URL, DBID, DBPW);
+				
+				// 커넥션 풀 기준 DB접속 코드
+				con = ds.getConnection();
 		
 				// 1. SELECT 쿼리문을 작성합니다.
 				// 입력받은 id가 실제로 DB에 존재하는지 조회하는 쿼리문을 작성해주세요.
@@ -136,8 +167,6 @@ public class UsersDAO {
 				} else {
 					return LOGIN_FAIL;
 				}	
-			} catch (ClassNotFoundException e) {	
-				e.printStackTrace();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			} finally {
@@ -173,7 +202,11 @@ public class UsersDAO {
 			// UserVO에 입력된 비밀번호와 폼에서 날린 dpw를 비교
 			if(user.getUpw().equals(dpw)) {
 				// 접속 주소, 계정, 비밀번호를 이용해 접속요청을 넣습니다.
-				con = DriverManager.getConnection(URL, DBID, DBPW);
+				// JDBC 기준 DB접속 코드
+				//con = DriverManager.getConnection(URL, DBID, DBPW);
+				
+				// 커넥션 풀 기준 DB접속 코드
+				con = ds.getConnection();
 				
 				// 1. INSERT 쿼리문을 작성합니다.
 				String sql = "DELETE FROM users WHERE uid=?";
@@ -230,8 +263,11 @@ public class UsersDAO {
 		
 		// DB연결로직을 집어넣어주세요
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection(URL, DBID, DBPW);
+			// JDBC 기준 DB접속 코드
+			//con = DriverManager.getConnection(URL, DBID, DBPW);
+						
+			// 커넥션 풀 기준 DB접속 코드
+			con = ds.getConnection();
 			// 1. SELECT 쿼리문을 작성합니다.
 			// 입력받은 id가 실제로 DB에 존재하는지 조회하는 쿼리문을 작성헤주세요
 			String sql = "SELECT * FROM users WHERE uid = ?";
@@ -251,8 +287,6 @@ public class UsersDAO {
 				resultData.setEmail(rs.getString("email"));
 			} 
 			
-		} catch (ClassNotFoundException e) {	
-			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -274,5 +308,124 @@ public class UsersDAO {
 		// ResultSet에 있던 자료를 입력받은 UsersVO를 리턴
 		return resultData;
 	} // end getUserInfo
+	
+	//user Update
+	// 회원정보 수정 메서드
+	public int usersUpdate(UsersVO user) {
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			// JDBC 기준 DB접속 코드
+			//con = DriverManager.getConnection(URL, DBID, DBPW);
+						
+			// 커넥션 풀 기준 DB접속 코드
+			con = ds.getConnection();
+			// 1. UPDATE 쿼리문을 작성합니다.
+			// 입력받은 id가 실제로 DB에 존재하는지 조회하는 쿼리문을 작성헤주세요
+			String sql = "UPDATE users set upw = ?, uname = ?, email = ? WHERE uid = ?";
+			// 2. 쿼리문의 ?자리에 적용할 변수를 집어넣습니다.
+			// DB연결 후 입력받은 user의 .getUid()를 이용해 조회구문 완성
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, user.getUpw());
+			pstmt.setString(2, user.getUname());
+			pstmt.setString(3, user.getEmail());
+			pstmt.setString(4, user.getUid());
+			
+			// 3. 쿼리문 실행 및 데이터 받아오기.
+			pstmt.executeUpdate();
+			
+			return UPDATE_SUCCESS;
+						
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결 끊기
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return UPDATE_FAIL;
+	}// end usersUodate
+	
+	// 전체 데이터를 다 가져오는 getAllUser()
+	// 파라미터는 필요 없습니다.(조건 없이 전체 유저 목록을 가져옴)
+	// UsersVO 1개는 SELECT구문의 row 한 줄을 의미합니다.
+	// 전체 데이터는 회원 가입 상황에 따라 유동적이므로
+	// 길이를 정해놓고 로직을 짜면 안됩니다.
+	// 따라서 길이를 가변적으로 맞춰줄 수 있는 ArrayList로 UsersVO를 감싸
+	// 조회 결과가 몇 줄이 나오던지 대응할 수 있도록 합니다.
+	public ArrayList<UsersVO> getAllUser() {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		// 비어있는 ArrayList<UserVO>도 같이 선언
+		ArrayList<UsersVO> userList = new ArrayList<>();
+		
+		// DB연결로직을 집어넣어주세요
+		try {
+			// JDBC 기준 DB접속 코드
+			//con = DriverManager.getConnection(URL, DBID, DBPW);
+						
+			// 커넥션 풀 기준 DB접속 코드
+			con = ds.getConnection();
+			// 1. SELECT 쿼리문을 작성합니다.
+			String sql = "SELECT * FROM users";
+			
+			pstmt = con.prepareStatement(sql);
+			
+			// 3. 쿼리문 실행 및 데이터 받아오기.
+			rs = pstmt.executeQuery();
+				
+			// row 개수만큼 반복합니다.
+			while(rs.next()) {
+				// ArrayList에 넣어줄 빈 UsersVO생성
+				UsersVO user = new UsersVO();
+				// ResultSet에 든 컬럼별 값을 꺼냅니다.
+				String uid = rs.getString("uid");
+				String upw = rs.getString("upw");
+				String uname = rs.getString("uname");
+				String email = rs.getString("email");
+				// UsersVO에 setter로 저장합니다.
+				user.setUid(uid);
+				user.setUpw(upw);
+				user.setUname(uname);
+				user.setEmail(email);
+				
+				// ArrayList에 그 UsersVO를 저장합니다.
+				userList.add(user);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결 끊기
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+				if(rs != null && !rs.isClosed()) {
+					rs.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		// 테이블에 있던 모든 자료를 가지고 있는 userList를 리턴
+		return userList;
+	} // end getAllUser
 }
 

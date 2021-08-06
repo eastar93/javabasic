@@ -20,7 +20,7 @@
 	<form action="user_login_ok.jsp" method="post">
 			<input type="text" name="uid" placeholder="ID"/><br/>
 			<input type="password" name="upw" placeholder="PW"/>
-			<input type="submit" value="로그인"/></br>
+			<input type="submit" value="로그인"/>
 	</form>
 	<a href="users_join_form.jsp">회원가입 하러가기</a>
 
