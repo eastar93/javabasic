@@ -3,6 +3,8 @@
 <%@page import="kr.co.ictedu.UsersDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" 
+	prefix="c" %>
 <%
 	// 0. 로그인하지 않은 사용자 처리
 	String idSession = (String)session.getAttribute("i_s");
@@ -40,13 +42,24 @@
 		<%-- userList는 VO의 집합이고, 여기서
 		UsersVO를 하나하나 순차적으로 뽑아서 출력해야 하므로
 		향상된 for문을 사용합니다. --%>
-		<% for(UsersVO user : userList) { %>
+		<%--<% for(UsersVO user : userList) { 
 			<tr>
 				<td><%= user.getUid() %></td>
 				<td><%= user.getUname() %></td>
 				<td><%= user.getEmail() %></td>
 			</tr>
 		<% } %>
+		--%>
+		<%-- JSTL 적용 버전 
+		forEach 구문은 반복문이고, Item에 향상된 for문의 우측 요소
+		그리고 var에 왼쪽 요소를 집어넣어주시면 됩니다.--%>
+			<c:forEach var="user" items="${userList}">
+				<tr>
+					<td>${user.uid }</td>
+					<td>${user.uname }</td>
+					<td>${user.email }</td>					
+				</tr>
+			</c:forEach>
 		</tbody>
 		
 	</table>
