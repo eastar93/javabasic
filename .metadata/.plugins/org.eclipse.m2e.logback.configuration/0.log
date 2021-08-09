@@ -76,3 +76,16 @@
 2021-08-05 09:36:38,400 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2021-08-05 18:15:04,350 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2021-08-05 18:20:57,537 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-06 09:20:47,654 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-08-06 12:34:21,080 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @11684407ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-08-06 12:34:21,410 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.27.v20200227; built: 2020-03-02T14:40:42.212Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_292-b10
+2021-08-06 12:34:21,441 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2021-08-06 12:34:21,441 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2021-08-06 12:34:21,442 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2021-08-06 12:34:21,497 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@33962e44{/wse,null,AVAILABLE}
+2021-08-06 12:34:21,540 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4bbfc0ab{HTTP/1.1, (http/1.1)}{0.0.0.0:53407}
+2021-08-06 12:34:21,540 [main] INFO  org.eclipse.jetty.server.Server - Started @11684875ms
+2021-08-06 12:34:21,541 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2021-08-06 18:26:39,448 [Framework stop] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4bbfc0ab{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2021-08-06 18:26:39,448 [Framework stop] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2021-08-06 18:26:39,475 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@33962e44{/wse,null,UNAVAILABLE}
