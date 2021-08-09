@@ -34,7 +34,7 @@
 </head>
 <body>
 	<h1><%= resultData.getUid() %> 회원 정보 수정</h1>
-	<form action="user_update_ok.jsp" method="post">
+	<form action="01_05-user_update_ok.jsp" method="post">
 		<input type="text" name="uid" value="<%= resultData.getUid() %>" 
 			placeholder="ID" readonly required/><br/>
 		<input type="password" name="upw" 

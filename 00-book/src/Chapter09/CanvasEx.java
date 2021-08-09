@@ -20,6 +20,7 @@ public class CanvasEx {
 	}
 }
 
+
 class MyCanvas extends Canvas {
 	
 	public void paint(Graphics g) {
