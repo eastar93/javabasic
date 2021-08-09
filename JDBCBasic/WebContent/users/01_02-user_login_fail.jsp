@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>로그인에 실패했습니다.</h1>
-	<a href ="user_login_form.jsp">로그인창으로 돌아가기</a>
+	<a href ="01_02-user_login_form.jsp">로그인창으로 돌아가기</a>
 	
 </body>
 </html>

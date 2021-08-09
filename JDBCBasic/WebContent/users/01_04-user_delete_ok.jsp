@@ -28,7 +28,7 @@
 		session.invalidate();
 	} else if(deleteResultNum == 0) {
 		session.invalidate();		
-		response.sendRedirect("user_login_form.jsp");
+		response.sendRedirect("01_02-user_login_form.jsp");
 	}
 	
 %>    
@@ -41,6 +41,6 @@
 </head>
 <body>
 	<h1><%=sessionId %>의 계정 삭제가 완료되었습니다.</h1><br/>
-	<a href="user_login_form.jsp">삭제 확인 및 돌아가기</a>
+	<a href="01_02-user_login_form.jsp">삭제 확인 및 돌아가기</a>
 </body>
 </html>

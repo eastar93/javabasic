@@ -8,7 +8,7 @@
 	String idSession = (String)session.getAttribute("i_s");
 	
 	if(idSession == null) {
-		response.sendRedirect("user_login_form.jsp");
+		response.sendRedirect("01_02-user_login_form.jsp");
 	}
 	
 	// 2. dao를 통해 UsersVO를 가지고 와야 합니다.
@@ -23,7 +23,7 @@
 	// resultData내부의 데이터가 null인 경우는 조회가 실패한 경우이므로 다시 로그인창으로 
 	if(resultData.getUid() == null) {
 		session.invalidate();
-		response.sendRedirect("user_login_form.jsp");
+		response.sendRedirect("01_02-user_login_form.jsp");
 	}
 %>
 <!DOCTYPE html>

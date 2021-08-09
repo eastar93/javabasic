@@ -25,7 +25,7 @@ request.setCharacterEncoding("UTF-8");
 	int updateResultNum = dao.usersUpdate(user);
 	
 	if(updateResultNum == 0) {
-		response.sendRedirect("user_update_fail.jsp");
+		response.sendRedirect("01_05-user_update_fail.jsp");
 	}
 	
 	// 5. user_update_fail.jsp 은 body 태그 내에
@@ -41,6 +41,6 @@ request.setCharacterEncoding("UTF-8");
 </head>
 <body>
 	<h1><%=user.getUid() %>님 계정의 수정이 완료되었습니다.</h1>
-	<a href="user_login_form.jsp">초기화면으로 돌아가기</a>
+	<a href="01_02-user_login_form.jsp">초기화면으로 돌아가기</a>
 </body>
 </html>

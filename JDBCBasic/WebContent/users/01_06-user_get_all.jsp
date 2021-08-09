@@ -9,7 +9,7 @@
 	// 0. 로그인하지 않은 사용자 처리
 	String idSession = (String)session.getAttribute("i_s");
 	if(idSession == null) {
-		response.sendRedirect("user_login_form.jsp");		
+		response.sendRedirect("01_02-user_login_form.jsp");		
 	} 
 		
 	// DB에서 전체 회원 데이터를 들고 나옵니다.

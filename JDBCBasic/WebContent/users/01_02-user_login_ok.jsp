@@ -30,7 +30,7 @@
 			session.setAttribute("i_s", uid);
 			session.setAttribute("p_s", upw);
 		} else if (loginResultNum == 0) {
-			response.sendRedirect("user_login_fail.jsp");
+			response.sendRedirect("01_02-user_login_fail.jsp");
 		}
 	}
 %>
@@ -44,9 +44,9 @@
 <body>
 	<h1><%=uid %>님 환영합니다.</h1>
 	<h1>로그인이 완료되었습니다.</h1>
-	<a href="user_logout.jsp">로그아웃하기</a><br/>
-	<a href="user_get_all.jsp">회원목록보기</a><br/>
-	<a href="user_update_form.jsp">회원정보수정</a><br/>
-	<a href="user_delete_form.jsp">회원탈퇴하기</a>
+	<a href="01_03-user_logout.jsp">로그아웃하기</a><br/>
+	<a href="01_06-user_get_all.jsp">회원목록보기</a><br/>
+	<a href="01_05-user_update_form.jsp">회원정보수정</a><br/>
+	<a href="01_04-user_delete_form.jsp">회원탈퇴하기</a>
 </body>
 </html>

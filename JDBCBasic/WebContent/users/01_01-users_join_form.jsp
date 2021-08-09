@@ -11,7 +11,7 @@
 	로 보내주는 form을 작성해주세요. post방식으로 전달합니다.
 	보내는 input태그의 name속성은 컬럼명과 일치시켜주세요. -->
 	<h1>회원가입 창입니다.</h1>
-	<form action="users_join.jsp" method="post">
+	<form action="01_01-users_join.jsp" method="post">
 		<input type="text" name="uid" placeholder="ID"/><br/>
 		<input type="password" name="upw" placeholder="PW"/><br/>
 		<input type="text" name="uname" placeholder="NAME"/><br/>

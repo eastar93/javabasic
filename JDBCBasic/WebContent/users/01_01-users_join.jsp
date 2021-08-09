@@ -32,6 +32,6 @@
 </head>
 <body>
 	<h1>회원 가입을 축하합니다!</h1></br>
-	<a href="user_login_form.jsp">로그인 하러 가기</a>
+	<a href="01_02-user_login_form.jsp">로그인 하러 가기</a>
 </body>
 </html>
