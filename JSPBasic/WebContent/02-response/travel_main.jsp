@@ -23,6 +23,6 @@
 	<input type="radio" name="city" value="Paries">파리<br/>
 	
 	<input type=submit value="Go!!">
-
+	</form>
 </body>
 </html>

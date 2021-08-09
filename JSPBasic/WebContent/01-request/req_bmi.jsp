@@ -34,5 +34,6 @@
  		신장 : <input type="text" name="height" size="10px">cm<br/>
  		체중 : <input type="text" name="weight"size="10px">kg<br/>	
 		<input type="submit" value="확인">
+	</form>
 </body>
 </html>

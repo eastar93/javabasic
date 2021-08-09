@@ -35,5 +35,6 @@
 		<td>파리</td>
 	</tr>
 </table>
+</form>
 </body>
 </html>

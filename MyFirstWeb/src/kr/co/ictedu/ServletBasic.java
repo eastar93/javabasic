@@ -43,22 +43,24 @@ public class ServletBasic extends HttpServlet {
 	 * @see Servlet#destroy()
 	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
+		// 소멸자 메서드, 서블릿 객체가 메모리에서 삭제될 때 호출(소멸시 1회만)
+		System.out.println("destroy메서드 호출");
 	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// Http Get요청이 들어왔을때 작동하는 메서드
 		System.out.println("doGet 메서드 호출됨 !!!!");
+		request.getParameter("1234");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		// Http Post요청이 들어왔을때 작동하는 메서드
 		System.out.println("doPost 메서드 호출됨!!!!");
 	}
 
