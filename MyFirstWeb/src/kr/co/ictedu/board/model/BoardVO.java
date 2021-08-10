@@ -4,20 +4,20 @@ import java.sql.Timestamp;
 
 public class BoardVO {
 	
-	private String bid;
+	private int bid;
 	private String bname;
 	private String btitle;
 	private String bcontent;
 	// Timestamp는 시 분 초까지 표기, Date는 년 월 일만 표기합니다.
 	private Timestamp bdate;
-	private String bhit;
+	private int bhit;
 	
 	public BoardVO() {
 	
 	}
 	
-	public BoardVO(String bid, String bname, String btitle, 
-					String bcontent, Timestamp bdate, String bhit) {
+	public BoardVO(int bid, String bname, String btitle, 
+					String bcontent, Timestamp bdate, int bhit) {
 		super();
 		this.bid = bid;
 		this.bname = bname;
@@ -27,11 +27,11 @@ public class BoardVO {
 		this.bhit = bhit;
 	}
 
-	public String getBid() {
+	public int getBid() {
 		return bid;
 	}
 
-	public void setBid(String bid) {
+	public void setBid(int bid) {
 		this.bid = bid;
 	}
 
@@ -67,11 +67,11 @@ public class BoardVO {
 		this.bdate = bdate;
 	}
 
-	public String getBhit() {
+	public int getBhit() {
 		return bhit;
 	}
 
-	public void setBhit(String bhit) {
+	public void setBhit(int bhit) {
 		this.bhit = bhit;
 	}
 
@@ -79,7 +79,7 @@ public class BoardVO {
 	public String toString() {
 		return "BoardVO [bid=" + bid + ", bname=" + bname + 
 				", btitle=" + btitle + ", bcontent=" + bcontent + 
-				", bdate=" + bdate + ", bhit=" + bhit + "]";
+				", bdate="	+ bdate + ", bhit=" + bhit + "]";
 	}
 }
 

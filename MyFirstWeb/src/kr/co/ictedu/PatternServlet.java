@@ -3,6 +3,7 @@ package kr.co.ictedu;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.co.ictedu.board.service.BoardDetailService;
+import kr.co.ictedu.board.service.BoardListService;
 import kr.co.ictedu.board.service.BoardWriteService;
 import kr.co.ictedu.board.service.IBoardService;
 
@@ -67,6 +70,9 @@ public class PatternServlet extends HttpServlet {
 		// 인터페이스를 생성합니다.
 		IBoardService sv = null;
 		
+		// 해당 로직을 실행한 뒤에 넘어갈 .jsp 파일 명칭/경로 지정
+		String ui = null;
+		
 	
 		// 콘솔이 아닌 사용자가 확인할 수 있도록 .jsp화면에
 		// 변수에 담긴 자료를 찍는 out.print(); 사용을 위한
@@ -100,15 +106,37 @@ public class PatternServlet extends HttpServlet {
 			// BoardWriteService의 execute를 호출하면
 			// 복잡한 서비스 로직을 이 파일에는 한 줄만 기입해서 처리합니다.
 			sv.execute(request, response);
+			// 경로 저장시 / 는 WebContent폴더가 기본으로 잡혀있습니다.
+			ui = "/board/board_list.jsp";
+			// 경로 저장 후에는 페이지 강제이동(forward)를 수행합니다.
 			
 		} else if(uri.equals("/MyFirstWeb/boardupdate.do")) {
 			out.println("글 수정 창으로 이동합니다.");
 		} else if(uri.equals("/MyFirstWeb/boarddelete.do")) {
 			out.println("글 삭제 창으로 이동합니다.");
 		} else if(uri.equals("/MyFirstWeb/boardselect.do")) {
-			out.println("글 조회 창으로 이동합니다.");
+			// 글 조회창 로직을 실행하도록 내부 코드를 작성해주세요.
+			sv = new BoardListService();
+			sv.execute(request, response);
+			ui = "/board/board_list.jsp";
+			
+		} else if(uri.equals("/MyFirstWeb/boarddetail.do")) {
+			sv = new BoardDetailService();
+			sv.execute(request, response);
+			ui = "/board/board_detail.jsp";
+			
 		} else {
 			out.println("잘못된 패턴입니다.");
 		}
+		
+		// 포워드 로직은 조건문이 모두 작동한 뒤에 실행합니다.
+		// RequestDispatcher를 사용해 포워딩을 하면
+		// request, response및 자료를 jsp페이지에 전달할 수 있습니다.
+		// 모델2 방식은 스크립트릿을 쓰지 않기 때문에
+		// 컨트롤러단에서 출력에 필요한 데이터를 받아놨다
+		// 포워드로 .jsp에 전달합니다.
+		RequestDispatcher dp = 
+				request.getRequestDispatcher(ui);
+		dp.forward(request, response);
 	}
 }
