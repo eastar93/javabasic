@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.co.ictedu.board.service.BoardWriteService;
+import kr.co.ictedu.board.service.IBoardService;
+
 /**
  * Servlet implementation class PatternServlet
  */
@@ -60,6 +63,9 @@ public class PatternServlet extends HttpServlet {
 	// 만약 요청 메서드(get, post) 상관 없이 처리하게 만들고 싶다면
 	// 메서드 하나를 더 만들어서 요청한다.
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 서비스 호출을 위해 모든 서비스 자료형을 받을 수 있는
+		// 인터페이스를 생성합니다.
+		IBoardService sv = null;
 		
 	
 		// 콘솔이 아닌 사용자가 확인할 수 있도록 .jsp화면에
@@ -82,19 +88,24 @@ public class PatternServlet extends HttpServlet {
 			out.println("회원가입 요청 확인");
 		} else if(uri.equals("/MyFirstWeb/login.do")) {
 			out.println("로그인 요청 확인");
-		} else if(uri.equals("/MyFirstWeb/lupdate.do")) {
+		} else if(uri.equals("/MyFirstWeb/userupdate.do")) {
 			out.println("회원 정보 수정 요청 확인");
-		} else if(uri.equals("/MyFirstWeb/ldelete.do")) {
+		} else if(uri.equals("/MyFirstWeb/userdelete.do")) {
 			out.println("회원 탈퇴 요청 확인");
 		
 		// PatternServlet2의 패턴을 .do로 고쳐서 여기 옮겨주세요.
-		} else if(uri.equals("/MyFirstWeb/write.do")) {
-			out.println("글쓰기 창으로 이동합니다.");
-		} else if(uri.equals("/MyFirstWeb/wupdate.do")) {
+		} else if(uri.equals("/MyFirstWeb/boardwrite.do")) {
+			// 글쓰기에 필요한 로직을 호출하도록 서비스를 생성합니다.
+			sv = new BoardWriteService();
+			// BoardWriteService의 execute를 호출하면
+			// 복잡한 서비스 로직을 이 파일에는 한 줄만 기입해서 처리합니다.
+			sv.execute(request, response);
+			
+		} else if(uri.equals("/MyFirstWeb/boardupdate.do")) {
 			out.println("글 수정 창으로 이동합니다.");
-		} else if(uri.equals("/MyFirstWeb/wdelete.do")) {
+		} else if(uri.equals("/MyFirstWeb/boarddelete.do")) {
 			out.println("글 삭제 창으로 이동합니다.");
-		} else if(uri.equals("/MyFirstWeb/select.do")) {
+		} else if(uri.equals("/MyFirstWeb/boardselect.do")) {
 			out.println("글 조회 창으로 이동합니다.");
 		} else {
 			out.println("잘못된 패턴입니다.");
