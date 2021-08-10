@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Chapter08.Able"/>
-<fullyQualifiedTypeName name="Chapter08.AbleComp"/>
-<fullyQualifiedTypeName name="java.lang.Process"/>
-<fullyQualifiedTypeName name="java.util.Properties"/>
-<fullyQualifiedTypeName name="java.util.Enumeration"/>
-<fullyQualifiedTypeName name="java.util.Base64"/>
-<fullyQualifiedTypeName name="java.util.Base64.Encoder"/>
-<fullyQualifiedTypeName name="java.io.UnsupportedEncodingException"/>
-<fullyQualifiedTypeName name="Chapter09.FrameEx2"/>
-<fullyQualifiedTypeName name="Chapter09.PanelEx"/>
-<fullyQualifiedTypeName name="java.awt.Dialog"/>
-<fullyQualifiedTypeName name="Chapter09.DialogEx"/>
-<fullyQualifiedTypeName name="java.awt.CheckboxGroup"/>
-<fullyQualifiedTypeName name="java.awt.Checkbox"/>
-<fullyQualifiedTypeName name="java.awt.Choice"/>
-<fullyQualifiedTypeName name="java.awt.Frame"/>
 <fullyQualifiedTypeName name="java.awt.Point"/>
 <fullyQualifiedTypeName name="java.awt.MenuBar"/>
 <fullyQualifiedTypeName name="java.awt.Menu"/>
@@ -45,7 +29,6 @@
 <fullyQualifiedTypeName name="javax.naming.InitialContext"/>
 <fullyQualifiedTypeName name="javax.sql.DataSource"/>
 <fullyQualifiedTypeName name="java.applet.Applet"/>
-<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="java.awt.Panel"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.awt.Label"/>
@@ -60,4 +43,21 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="kr.co.ictedu.board.service.IBoardService"/>
 <fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardWriteService"/>
+<fullyQualifiedTypeName name="Chapter12.JFrameEx"/>
+<fullyQualifiedTypeName name="javax.swing.JEditorPane"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="Chapter12.JEditorPaneEx"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollBar"/>
+<fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+<fullyQualifiedTypeName name="java.awt.Dimension"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.swing.JTextPane"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyledDocument"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleContext"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleConstants"/>
+<fullyQualifiedTypeName name="Chapter12.JTextPaneEx"/>
 </qualifiedTypeNameHistroy>
