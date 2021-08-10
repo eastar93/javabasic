@@ -10,4 +10,4 @@ org.eclipse.jdt.core.compiler.release=disabled
 org.eclipse.jdt.core.compiler.source=1.8
 org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
 org.eclipse.jdt.core.userLibrary.JDBC\ Connection=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.26.jar"/>\r\n</userlibrary>\r\n
-org.eclipse.jdt.core.userLibrary.OJDBC\ Connection=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="E\:/\uC2E0\uB3D9\uADDC/eastar93/sqldeveloper-20.2.0.175.1842-x64/sqldeveloper/jdbc/lib/ojdbc8.jar"/>\r\n</userlibrary>\r\n
+org.eclipse.jdt.core.userLibrary.OJDBC\ Connection=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<userlibrary systemlibrary\="false" version\="2">\r\n\t<archive path\="C\:/sqldeveloper-20.2.0.175.1842-x64/sqldeveloper/jdbc/lib/ojdbc8.jar"/>\r\n</userlibrary>\r\n
