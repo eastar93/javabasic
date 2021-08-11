@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardDeleteService"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardDetailService"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardUpdateService"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardUpdateServiceOk"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.model.BoardDAO"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.board.model.BoardVO"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>
