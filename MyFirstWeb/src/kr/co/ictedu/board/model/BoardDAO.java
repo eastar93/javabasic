@@ -12,6 +12,11 @@ public class BoardDAO {
 	
 	private static final int WRITE_SUCCESS = 1;
 	private static final int WRITE_FAIL = 0;
+	private static final int DELETE_SUCCESS = 1;
+	private static final int DELETE_FAIL = 0;
+	private static final int UPDATE_SUCCESS = 1;
+	private static final int UPDATE_FAIL = 0;
+	
 	
 	private DataSource ds;
 
@@ -176,5 +181,82 @@ public class BoardDAO {
 		}
 		return board;
 	}// end getBoardDetail
+	
+	// 글 삭제 로직
+	public int DeleteBoard(String bid) {
+		//사용할 변수들 선언
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		int DelResultCode;
+		
+		String sql = "DELETE FROM jspboard WHERE bid = ?";
+		
+		
+		//커넥션 연결 및 쿼리문 실행
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  bid);
+			
+			pstmt.executeUpdate();
+			DelResultCode = DELETE_SUCCESS;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			DelResultCode = DELETE_FAIL;
+		} finally {
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		//모든 로직 종료 후 결과코드 리턴
+		return DelResultCode;
+	}// end DeleteBoard
+	
+	// 글 수정 로직
+	public int UpdateBoard(BoardVO board) {
+		// 변수 선언
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		int UpdateResultCode;
+		
+		String sql = "UPDATE jspboard SET btitle = ?, bcontent = ? "
+				+ "WHERE bid = ?";
+		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, board.getBtitle());
+			pstmt.setString(2, board.getBcontent());
+			pstmt.setInt(3, board.getBid());
+			
+			pstmt.executeUpdate();
+			UpdateResultCode = UPDATE_SUCCESS;
+		} catch (Exception e) {
+			e.printStackTrace();
+			UpdateResultCode = UPDATE_FAIL;
+		} finally {
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return UpdateResultCode;
+	}// end UpdateBoard
+	
 }
 

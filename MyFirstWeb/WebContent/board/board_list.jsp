@@ -28,14 +28,15 @@
 				<c:forEach var="board" items="${boardList }">
 					<tr>
 						<td>${board.bid }</td>
-						<td><a href="#">${board.btitle }</a></td> 
+						<td><a href="/MyFirstWeb/boarddetail.do?bid=${board.bid}">${board.btitle }</a></td> 
 						<td>${board.bname }</td>					
-						<td>${board.bdate }</td>					
-						<td>${board.bhit }</td>				
-					</tr>
+						<td>${board.bdate }</td>			
+						<td>${board.bhit }</td>		
+					</tr>				
 				</c:forEach>
 			</tbody>
 		</table>
+		<a href="/MyFirstWeb/board/board_write_form.jsp">글쓰기</a>
 	</body>
 </html>
 
