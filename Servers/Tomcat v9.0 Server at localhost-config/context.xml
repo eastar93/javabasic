@@ -26,6 +26,7 @@
     <!--
     <Manager pathname="" />
     -->
+    
     <!-- 
     	아래 코드를 이용해 커넥션 풀 설정을 합니다.
     	driverClassName = "Class.forName(); 역할

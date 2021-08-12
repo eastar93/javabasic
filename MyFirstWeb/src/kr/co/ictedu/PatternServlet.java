@@ -104,6 +104,7 @@ public class PatternServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if(uri.equals("/MyFirstWeb/join.do")) {
+			System.out.println(request);
 			usv = new UserJoinService();
 			usv.execute(request, response);
 			ui = "/users/user_login.jsp";

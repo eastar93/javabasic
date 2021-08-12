@@ -18,11 +18,14 @@ public class UserJoinService implements IUserService {
 			String userPw = request.getParameter("userPw");
 			String userName = request.getParameter("userName");
 			String userEmail = request.getParameter("userEmail");
+			System.out.println(userId);
 						
 			UsersVO user = new UsersVO(userId, userPw, userName, userEmail);
 				
 			UsersDAO dao = UsersDAO.getInstance();
-			dao.joinUsers(user);
+			
+			int resultcode = dao.joinUsers(user);
+			System.out.println(resultcode);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

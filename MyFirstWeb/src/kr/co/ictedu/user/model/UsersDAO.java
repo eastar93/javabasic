@@ -82,7 +82,8 @@ public class UsersDAO {
 		Connection con = null;
 		// 쿼리문 실행을 위한 PreparedStatement 객체 생성
 		PreparedStatement pstmt = null;
-
+		
+		int result = 0;
 		try {
 			
 			// 접속 주소, 계정, 비밀번호를 이용해 접속요청을 넣습니다.
@@ -105,6 +106,7 @@ public class UsersDAO {
 			//3. 만든 쿼리문 실행하기
 			pstmt.executeUpdate();
 			
+			result = 1;
 		} catch(SQLException e) {
 			System.out.println("에러 : " + e);
 		} finally {
@@ -121,7 +123,7 @@ public class UsersDAO {
 				e.printStackTrace();
 			}
 		}
-		return 1;
+		return result;
 	}// end joinUsers
 	
 	public int usersLogin(UsersVO user) {
