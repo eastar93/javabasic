@@ -55,4 +55,5 @@
 <fullyQualifiedTypeName name="kr.co.ictedu.user.service.IUserService"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="kr.co.ictedu.user.service.UserLogoutService"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
 </qualifiedTypeNameHistroy>
