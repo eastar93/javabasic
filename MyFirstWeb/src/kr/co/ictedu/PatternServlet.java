@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import kr.co.ictedu.board.service.BoardDeleteService;
 import kr.co.ictedu.board.service.BoardDetailService;
@@ -18,6 +19,10 @@ import kr.co.ictedu.board.service.BoardUpdateService;
 import kr.co.ictedu.board.service.BoardUpdateServiceOk;
 import kr.co.ictedu.board.service.BoardWriteService;
 import kr.co.ictedu.board.service.IBoardService;
+import kr.co.ictedu.user.service.IUserService;
+import kr.co.ictedu.user.service.UserJoinService;
+import kr.co.ictedu.user.service.UserLoginService;
+import kr.co.ictedu.user.service.UserLogoutService;
 
 /**
  * Servlet implementation class PatternServlet
@@ -71,11 +76,16 @@ public class PatternServlet extends HttpServlet {
 	protected void doRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 서비스 호출을 위해 모든 서비스 자료형을 받을 수 있는
 		// 인터페이스를 생성합니다.
-		IBoardService sv = null;
+		IBoardService bsv = null;
+		IUserService usv = null;
+		
 		
 		// 해당 로직을 실행한 뒤에 넘어갈 .jsp 파일 명칭/경로 지정
 		String ui = null;
 		
+		// 세션 쓰는법
+		HttpSession session = null;
+		session = request.getSession();
 	
 		// 콘솔이 아닌 사용자가 확인할 수 있도록 .jsp화면에
 		// 변수에 담긴 자료를 찍는 out.print(); 사용을 위한
@@ -94,52 +104,68 @@ public class PatternServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		if(uri.equals("/MyFirstWeb/join.do")) {
-			out.println("회원가입 요청 확인");
+			usv = new UserJoinService();
+			usv.execute(request, response);
+			ui = "/users/user_login.jsp";
+			
 		} else if(uri.equals("/MyFirstWeb/login.do")) {
-			out.println("로그인 요청 확인");
+			usv = new UserLoginService();
+			usv.execute(request, response);
+			// 세션에서 로그인 여부 확인
+			String result = (String)session.getAttribute("login");
+			if(result != null && result.equals("fail")) {
+				session.invalidate();
+				ui = "/users/user_login.jsp";
+			} else {
+				ui = "/boardselect.do";				
+			}
 		} else if(uri.equals("/MyFirstWeb/userupdate.do")) {
 			out.println("회원 정보 수정 요청 확인");
+		} else if(uri.equals("/MyFirstWeb/userlogout.do")) {
+			usv = new UserLogoutService();
+			usv.execute(request, response);
+			ui = "/users/user_login.jsp";
 		} else if(uri.equals("/MyFirstWeb/userdelete.do")) {
 			out.println("회원 탈퇴 요청 확인");
 		
 		// PatternServlet2의 패턴을 .do로 고쳐서 여기 옮겨주세요.
 		} else if(uri.equals("/MyFirstWeb/boardwrite.do")) {
 			// 글쓰기에 필요한 로직을 호출하도록 서비스를 생성합니다.
-			sv = new BoardWriteService();
+			bsv = new BoardWriteService();
 			// BoardWriteService의 execute를 호출하면
 			// 복잡한 서비스 로직을 이 파일에는 한 줄만 기입해서 처리합니다.
-			sv.execute(request, response);
+			bsv.execute(request, response);
 			// 경로 저장시 / 는 WebContent폴더가 기본으로 잡혀있습니다.
 			ui = "/boardselect.do";
 			// 경로 저장 후에는 페이지 강제이동(forward)를 수행합니다.
 			
 		} else if(uri.equals("/MyFirstWeb/boardupdate.do")) {
-			sv = new BoardUpdateService();
-			sv.execute(request, response);
+			bsv = new BoardUpdateService();
+			bsv.execute(request, response);
 			ui = "/board/board_update_form.jsp";
 		} else if(uri.equals("/MyFirstWeb/boardupdateok.do")) {
 			// 1. 서비스 객체 생성
-			sv = new BoardUpdateServiceOk();
+			bsv = new BoardUpdateServiceOk();
 			// 2. 서비스 메서드 실행
-			sv.execute(request, response);
+			bsv.execute(request, response);
 			// 3. 수정한 다음은 디테일로 보내기
 			// 내가 수정한 글 번호 받아오기
 			String strbid = request.getParameter("bid");
 			ui = "/boarddetail.do?bid=" + strbid;
 			
 		} else if(uri.equals("/MyFirstWeb/boarddelete.do")) {
-			sv = new BoardDeleteService();
-			sv.execute(request, response);
+			bsv = new BoardDeleteService();
+			bsv.execute(request, response);
 			ui = "/boardselect.do";			
 		} else if(uri.equals("/MyFirstWeb/boardselect.do")) {
 			// 글 조회창 로직을 실행하도록 내부 코드를 작성해주세요.
-			sv = new BoardListService();
-			sv.execute(request, response);
+			bsv = new BoardListService();
+			bsv.execute(request, response);
 			ui = "/board/board_list.jsp";
 			
 		} else if(uri.equals("/MyFirstWeb/boarddetail.do")) {
-			sv = new BoardDetailService();
-			sv.execute(request, response);
+			bsv = new BoardDetailService();
+			bsv.execute(request, response);
 			ui = "/board/board_detail.jsp";
 			
 		} else {

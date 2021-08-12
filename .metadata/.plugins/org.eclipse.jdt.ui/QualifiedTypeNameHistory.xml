@@ -43,4 +43,16 @@
 <fullyQualifiedTypeName name="javax.swing.JColorChooser"/>
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="Chapter12.JColorChooserEx"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.ir.SetSplitState"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.service.UserLoginService"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.model.UsersVO"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.model.UsersDAO"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.service.UserJoinService"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.service.IUserService"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="kr.co.ictedu.user.service.UserLogoutService"/>
 </qualifiedTypeNameHistroy>

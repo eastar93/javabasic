@@ -17,7 +17,6 @@ public class BoardDAO {
 	private static final int UPDATE_SUCCESS = 1;
 	private static final int UPDATE_FAIL = 0;
 	
-	
 	private DataSource ds;
 
 	private static BoardDAO dao = new BoardDAO();
@@ -258,5 +257,37 @@ public class BoardDAO {
 		return UpdateResultCode;
 	}// end UpdateBoard
 	
+	// 글 조회수를 상승시키는 메서드
+	public void UpHit(String bid) {
+		// 필요한 변수들을 생성해주세요
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		// 특정 글의 조회수를 1 올리는 쿼리문
+		String sql = "UPDATE jspboard SET bHit = bHit + 1 WHERE bid = ?";
+				
+		// DB연결 후 코드를 실행해주세요 		
+		try {
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, bid);
+			
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(con != null && !con.isClosed()) {
+					con.close();
+				}
+				if(pstmt != null && !pstmt.isClosed()) {
+					pstmt.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	} // end UpHit
 }
 
