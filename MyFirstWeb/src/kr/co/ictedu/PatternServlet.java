@@ -15,14 +15,17 @@ import javax.servlet.http.HttpSession;
 import kr.co.ictedu.board.service.BoardDeleteService;
 import kr.co.ictedu.board.service.BoardDetailService;
 import kr.co.ictedu.board.service.BoardListService;
+import kr.co.ictedu.board.service.BoardPagingService;
 import kr.co.ictedu.board.service.BoardUpdateService;
 import kr.co.ictedu.board.service.BoardUpdateServiceOk;
 import kr.co.ictedu.board.service.BoardWriteService;
 import kr.co.ictedu.board.service.IBoardService;
 import kr.co.ictedu.user.service.IUserService;
+import kr.co.ictedu.user.service.UserDeleteService;
 import kr.co.ictedu.user.service.UserJoinService;
 import kr.co.ictedu.user.service.UserLoginService;
 import kr.co.ictedu.user.service.UserLogoutService;
+import kr.co.ictedu.user.service.UserUpdateService;
 
 /**
  * Servlet implementation class PatternServlet
@@ -121,14 +124,17 @@ public class PatternServlet extends HttpServlet {
 				ui = "/boardselect.do";				
 			}
 		} else if(uri.equals("/MyFirstWeb/userupdate.do")) {
-			out.println("회원 정보 수정 요청 확인");
+			usv = new UserUpdateService();
+			usv.execute(request, response);
+			ui = "/users/user_login.jsp";
 		} else if(uri.equals("/MyFirstWeb/userlogout.do")) {
 			usv = new UserLogoutService();
 			usv.execute(request, response);
 			ui = "/users/user_login.jsp";
 		} else if(uri.equals("/MyFirstWeb/userdelete.do")) {
-			out.println("회원 탈퇴 요청 확인");
-		
+			usv = new UserDeleteService();
+			usv.execute(request, response);
+			ui = "/users/user_login.jsp";		
 		// PatternServlet2의 패턴을 .do로 고쳐서 여기 옮겨주세요.
 		} else if(uri.equals("/MyFirstWeb/boardwrite.do")) {
 			// 글쓰기에 필요한 로직을 호출하도록 서비스를 생성합니다.
@@ -143,7 +149,7 @@ public class PatternServlet extends HttpServlet {
 		} else if(uri.equals("/MyFirstWeb/boardupdate.do")) {
 			bsv = new BoardUpdateService();
 			bsv.execute(request, response);
-			ui = "/board/board_update_form.jsp";
+			ui = "/board/board_update.jsp";
 		} else if(uri.equals("/MyFirstWeb/boardupdateok.do")) {
 			// 1. 서비스 객체 생성
 			bsv = new BoardUpdateServiceOk();
@@ -160,7 +166,12 @@ public class PatternServlet extends HttpServlet {
 			ui = "/boardselect.do";			
 		} else if(uri.equals("/MyFirstWeb/boardselect.do")) {
 			// 글 조회창 로직을 실행하도록 내부 코드를 작성해주세요.
-			bsv = new BoardListService();
+			// bsv = new BoardListService();
+			// bsv.execute(request, response);
+			// ui = "/board/board_list.jsp";
+			
+			// 위의 일반 전체게시물 가져오기를 페이징 가져오기로 대처해주세요.
+			bsv = new BoardPagingService();
 			bsv.execute(request, response);
 			ui = "/board/board_list.jsp";
 			

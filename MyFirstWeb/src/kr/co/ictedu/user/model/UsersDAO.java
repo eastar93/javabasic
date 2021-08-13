@@ -200,6 +200,7 @@ public class UsersDAO {
 		// 쿼리문 실행을 위한 PreparedStatement 객체 생성
 		PreparedStatement pstmt = null;
 				
+		System.out.println(user);
 		try {
 			// UserVO에 입력된 비밀번호와 폼에서 날린 dpw를 비교
 			if(user.getUpw().equals(dpw)) {
