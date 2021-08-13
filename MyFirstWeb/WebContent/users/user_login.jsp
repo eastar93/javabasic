@@ -13,7 +13,7 @@
 		<input type="password" name="userPw" placeholder="PW">
 		<input type="submit" value="로그인">	<br/>
 		<a href="/MyFirstWeb/users/user_join.jsp"> 
-			<input type="button" value="회원가입"></a>
+		<input type="button" value="회원가입"></a>
 	</form>
 </body>
 </html>
