@@ -28,15 +28,21 @@
 			<td>작성일</td>
 			<td>${board.bdate }</td>
 		</tr>
-		<tr>
+	</table>
+	<table>
+		<tr colspan = "3">
 			<td>
 				<a href="/MyFirstWeb/boardselect.do">
 					<input type="submit" value="목록으로">
 				</a>
-				<form action="/MyFirstWeb/boardupdate.do" method="post">
-					<input type="hidden" value="${board.bid }" name="bid"/>
+			</td>
+			<td>
+				<form action="/MyFirstWeb/boardupdate.do" method="post">						
+					<input type="hidden" value="${board.bid }" name="bid"/>						
 					<input type="submit" value="수정하기"/>
 				</form>
+			</td>
+			<td>
 				<form action="/MyFirstWeb/boarddelete.do" method="post">
 					<input type="hidden" value="${board.bid }" name="bid"/>
 					<input type="submit" value="삭제하기"/>
