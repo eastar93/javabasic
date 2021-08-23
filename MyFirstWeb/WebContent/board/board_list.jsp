@@ -6,6 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -14,7 +18,7 @@
 <!--  테이블 형태로 작성해보겠습니다.
 	출력할 자료들은 글번호, 글제목, 글쓴이, 작성일, 조회수 순으로 테이블에출력해주시면 됩니다.
 	JSTL의 forEach구문을 쓰시되, items속성에 "${boardList}"를 넣어주시면 됩니다. -->	
-		<table border="1">
+		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>글번호</th>
@@ -27,11 +31,11 @@
 			<tbody>
 				<c:forEach var="board" items="${boardList }">
 					<tr>
-						<td align=center>${board.bid }</td>
+						<td>${board.bid }</td>
 						<td><a href="/MyFirstWeb/boarddetail.do?bid=${board.bid}">${board.btitle }</a></td> 
 						<td>${board.bname }</td>					
 						<td>${board.bdate }</td>			
-						<td align=center>${board.bhit }</td>		
+						<td>${board.bhit }</td>		
 					</tr>				
 				</c:forEach>
 			</tbody>
