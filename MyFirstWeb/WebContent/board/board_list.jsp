@@ -43,33 +43,47 @@
 		
 		<%-- 페이징 버튼 만들기 
 		표현할 글이 있는 경우에만 버튼을 표시함 --%>
-		<c:if test="${pageDTO.hasBoard() }">		
+		<c:if test="${pageDTO.hasBoard() }">
+			<%-- 표현할 글이 있다면 부트스트랩 페이징처리 적용. --%>		
+			<ul class="pagination justify-content-center">
 			
-			<%-- 뒤로가기 버턴을 표시할지 말지 결정하는 부분 --%>
-			<c:if test="${pageDTO.startPage > 10}">
-				<a href="/MyFirstWeb/boardselect.do?page=${pageDTO.startPage-10}">[prev]</a>			
-			</c:if>
+				<%-- 뒤로가기 버턴을 표시할지 말지 결정하는 부분 --%>
+				<c:if test="${pageDTO.startPage > 10}">
+					<li class="page-item"><a class="page-link" href="/MyFirstWeb/boardselect.do?page=${pageDTO.startPage-10}">
+						«
+					</a></li>
+				</c:if>
+				
+				<%-- 페이지 번호 10개 묶음을 깔아주는 부분 --%>
+				<c:forEach var="pNo" begin="${pageDTO.startPage}" end="${pageDTO.endPage}">
+					<li class="page-item">
+						<a class="page-link" href="/MyFirstWeb/boardselect.do?page=${pNo }">
+							[${pNo}]
+						</a>
+					</li>
+				</c:forEach>
+				
+				<%-- 다음으로 가기 버튼 표시할지 말지 결졍하는 부분 --%>
+				<c:if test="${pageDTO.endPage < pageDTO.totalPages }">
+					<li class="page-item">
+						<a class="page-link" href="/MyFirstWeb/boardselect.do?page=${pageDTO.startPage+10 }">
+							»
+						</a>
+					</li>
+				</c:if>
 			
-			<%-- 페이지 번호 10개 묶음을 깔아주는 부분 --%>
-			<c:forEach var="pNo" begin="${pageDTO.startPage}" end="${pageDTO.endPage}">
-				<a href="/MyFirstWeb/boardselect.do?page=${pNo }">[${pNo}]</a>
-			</c:forEach>
-			
-			<%-- 다음으로 가기 버튼 표시할지 말지 결졍하는 부분 --%>
-			<c:if test="${pageDTO.endPage < pageDTO.totalPages }">
-				<a href="/MyFirstWeb/boardselect.do?page=${pageDTO.startPage+10 }">[next]</a>
-			</c:if>
+			</ul><%-- 페이지네이션 종료 --%>
 		</c:if>
 		<%-- 페이징 부분 끝 --%>
 		<br/>
 		<a href="/MyFirstWeb/board/board_write.jsp">
-		<input type="button" value="글쓰기"></a>
+		<input type="button" class="btn btn-primary" value="글쓰기"></a>
 		<a href="/MyFirstWeb/users/user_update.jsp">
-		<input type="button" value="회원정보 수정"></a>
+		<input type="button" class="btn btn-success" value="회원정보 수정"></a>
 		<a href="/MyFirstWeb/userlogout.do">
-		<input type="button" value="로그아웃"></a>
+		<input type="button" class="btn btn-warning" value="로그아웃"></a>
 		<a href="/MyFirstWeb/users/user_delete.jsp">
-		<input type="button" value="회원탈퇴"></a>
+		<input type="button" class="btn btn-danger" value="회원탈퇴"></a>
 	</body>
 </html>
 
