@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
 <fullyQualifiedTypeName name="Chapter12.JTabbedPaneEx"/>
 <fullyQualifiedTypeName name="javax.swing.JScrollBar"/>
 <fullyQualifiedTypeName name="javax.swing.JSplitPane"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="kr.co.ictedu.board.service.BoardPagingService"/>
 <fullyQualifiedTypeName name="kr.co.ictedu.board.model.BoardPageDTO"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="ChainTest"/>
 </qualifiedTypeNameHistroy>

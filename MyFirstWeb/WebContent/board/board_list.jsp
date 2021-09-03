@@ -31,9 +31,9 @@
 			<tbody>
 				<c:forEach var="board" items="${boardList }">
 					<tr>
-						<td>${board.bid }</td>
+						<td><span class="badge round-pill bg-primary">${board.bid }</span></td>
 						<td><a href="/MyFirstWeb/boarddetail.do?bid=${board.bid}">${board.btitle }</a></td> 
-						<td>${board.bname }</td>					
+						<td><span class="badge bg-success">${board.bname }</span></td>					
 						<td>${board.bdate }</td>			
 						<td>${board.bhit }</td>		
 					</tr>				
