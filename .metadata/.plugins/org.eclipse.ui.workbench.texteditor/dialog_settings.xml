@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="board"/>
+		<item key="selection" value="maven"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="maven"/>
+			<item value="java-ver"/>
 			<item value="UsersVO user = new UsersVO();"/>
 			<item value="board"/>
 			<item value="execute"/>
 			<item value="execite"/>
 			<item value="sv"/>
 			<item value="ds"/>
-			<item value="idSession"/>
-			<item value="idSessopm"/>
-			<item value="Ms"/>
-			<item value="Mshunt"/>
-			<item value="hunt"/>
-			<item value="monster"/>
-			<item value="엘프"/>
-			<item value="System.out.printf(&quot;엘프의 체력은 %d입니다.%n&quot;,hp);"/>
-			<item value="Gd"/>
 		</list>
 		<list key="replacehistory">
 			<item value="bsv"/>
@@ -33,12 +26,6 @@
 			<item value="검사"/>
 			<item value="고블린"/>
 			<item value="hp"/>
-			<item value="Gl"/>
-			<item value="Vp"/>
-			<item value="Zb"/>
-			<item value="좀비"/>
-			<item value="오우거"/>
-			<item value="Og"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
